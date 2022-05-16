@@ -21,4 +21,5 @@ https://jaek1783.github.io/choi
 3. 블로그 페이지
 - 제작된 포트폴리오의 기간을 카드형식으로 제작하였다.
 
-## USE 
+## ✏️USE 라이브러리
+<img src="https://img.shields.io/badge/Pixabay-2EC66D?style=for-the-badge&logo=Pixabay&logoColor=white"> <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=YouTube&logoColor=white"> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
