@@ -1,0 +1,52 @@
+/* about */
+@keyframes slideIn {
+  0% {
+    transform:translateY(0);
+    box-shadow: 5px 11px 30px rgba(0,0,0,0.3);
+  }
+  100% {
+    transform:translateY(-10px);
+    box-shadow: 5px 11px 30px rgba(0,0,0,0.5);
+  }
+}
+
+#about{
+  width:22rem;
+  height:22rem;
+    display:table;
+    margin:7rem auto 0;
+    background-color: #131361;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+    animation-duration: 1s;
+    animation-name: slideIn;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  h2{
+    font-size: 1px;
+    line-height: 1px;
+    visibility: hidden;
+    display: none;
+  }
+  /* pc_size css */
+  dt.title{
+    width:100%;
+    padding:2rem 2rem 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+  }
+  dt.title>p{
+    padding-bottom:1rem;
+  }
+  .boxPc>dd{
+    text-align: center;
+    padding:1rem;
+    color:#fff;
+  }
+  .boxPc>dd>p:last-child{
+    padding-top:1.5rem;
+  }
