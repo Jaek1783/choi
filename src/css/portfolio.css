@@ -46,8 +46,6 @@
     bottom:-30%;
     border-radius:0 0 10px 10px;
     padding:0 1rem;
-    /* background-color: #f7fa30; */
-    /* background-color:#7878ff; */
     background-color: #131361;
     display: flex;
     align-items: center;
@@ -83,33 +81,26 @@
     transform:translateY(-10px);
     box-shadow: 5px 11px 30px rgba(0,0,0,0.8);
   }  
-  .cardT>dl>dt{
-  text-align: center;
-  padding:1rem 1rem 0;
-  } 
-  .cardT>dl>dd{
-    padding:0 1rem 1rem;
-  }
   .spanText{
     font-weight:bold;
   }
   .cardT:nth-child(1){
-    left:25%;
+    left:29%;
   }
   .cardT:nth-child(2){
-    left:55%;
+    left:51%;
   }
   .cardT:nth-child(3){
     top:31rem;
-    left:25%;
+    left:29%;
   }
   .cardT:nth-child(4){
     top:31rem;
-    left:55%;
+    left:51%;
   }
   .cardT:nth-child(5){
     top:58rem;
-    left:25%;
+    left:29%;
   }
   /* Mobile css */
   .Mbox{

@@ -52,10 +52,10 @@ function Portfolio(){
         query:"(min-width:1520px)"
         });
     const isTablet = useMediaQuery({
-        query:"(max-width:1521px) and (min-width: 1035px)" 
+        query:"(max-width:1521px) and (min-width: 1400px)" 
     });
     const isMobile = useMediaQuery({
-        query:"(max-width:1034px)"
+        query:"(max-width:1399px)"
         });
     const Tbox_Mbox = isTablet? 'Tbox':'Mbox';
     const cardT_cardM = isTablet? 'card cardT':'card cardM';

@@ -1,0 +1,50 @@
+.study_container{
+    padding-top:3rem;
+}
+.study_item_container{
+    width:80%;
+    margin:2rem auto;
+    box-sizing: border-box;
+    background-color: #ccc;
+    border-radius: 15px;
+    display: flex;
+}
+.study_item{
+    width:10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131361;
+    box-sizing: border-box;
+    border-radius: 15px 0 0 15px;
+    padding:2rem 0;
+    color:#fff;
+}
+.study_item>img{
+    width:5rem;
+    padding-bottom:1rem;
+}
+.study_content_container{
+    display: flex;
+}
+.study_content_container>li{
+    list-style-type: disc;
+    margin-left: 5rem;
+    padding:2rem 0;
+}
+
+/* youtube Item Style */
+.youtube_item{
+    width:4rem;
+    border-radius:100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.youtube_item>img{
+    padding-top:.2rem;
+}
+.youtubeName{
+    margin-top:1rem;
+    display: inline-block;
+}

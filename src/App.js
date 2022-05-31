@@ -4,6 +4,7 @@ import About from './js/About.js';
 import Portfolio from './js/Pofol.js';
 import Blog from './js/Blog.js';
 import Skills from './js/Skills';
+import Study from './js/Study';
 import {NavLink, Route, Routes, Link} from 'react-router-dom';
 
 const App = ()=> {
@@ -32,6 +33,7 @@ const App = ()=> {
       <Routes>
         <Route path="/choi" element={<About/>}/>
         <Route path="/skills" element={<Skills/>}/>
+        <Route path="/study" element={<Study/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/blog" element={<Blog/>}/>
       </Routes>
