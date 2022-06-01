@@ -2,9 +2,9 @@ import React from "react";
 import {useMediaQuery} from "react-responsive";
 import '../css/skills.css';
 import styles from '../css/text.module.css';
-import Icon01 from './Icon_item01';
-import Icon02 from './Icon_item02';
-import Icon03 from './Icon_item03';
+import Icon01 from './Skill_icon_item/Icon_item01';
+import Icon02 from './Skill_icon_item/Icon_item02';
+import Icon03 from './Skill_icon_item/Icon_item03';
 const Skills = ()=>{
     const items = [
         {title:'Default', content:<Icon01/>},

@@ -1,10 +1,10 @@
 import React from "react";
 import {useMediaQuery} from "react-responsive";
-import styles from '../css/text.module.css';
-import bootstrap from '../img/skills/bootstrap.png';
-import github from '../img/skills/github.png';
-import react_icon from '../img/skills/react.png';
-import visualcode from '../img/skills/visualcode.png';
+import styles from '../../css/text.module.css';
+import bootstrap from '../../img/skills/bootstrap.png';
+import github from '../../img/skills/github.png';
+import react_icon from '../../img/skills/react.png';
+import visualcode from '../../img/skills/visualcode.png';
 const Icon_item03 = ()=>{
     const coding_items = [
         {id:6, img:visualcode, alt:'비주얼스튜디오코드', name:'VS Code'},

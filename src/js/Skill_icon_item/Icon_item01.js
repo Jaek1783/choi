@@ -1,8 +1,8 @@
 import React from "react";
 import {useMediaQuery} from "react-responsive";
-import styles from '../css/text.module.css';
-import ppt from '../img/skills/ppt.png';
-import excel from '../img/skills/excel.png';
+import styles from '../../css/text.module.css';
+import ppt from '../../img/skills/ppt.png';
+import excel from '../../img/skills/excel.png';
 const Icon_item01 = ()=>{
     const default_items = [
         {id:1, img:ppt, alt:'파워포인트', name:'Power Point'},
