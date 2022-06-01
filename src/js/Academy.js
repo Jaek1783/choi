@@ -7,7 +7,7 @@ const Academy = ()=>{
         query:"(min-width:1740px)"
         });
 return(
-    <ul className={isPc? "flex container_pc":"flex container_mobile"}>
+    <ul className={"flex container_pc"}>
         <Academy_items/>
     </ul>
 )
