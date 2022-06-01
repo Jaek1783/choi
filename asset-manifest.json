@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/choi/static/css/main.ffaf700a.css",
-    "main.js": "/choi/static/js/main.2b81609f.js",
+    "main.css": "/choi/static/css/main.47012a39.css",
+    "main.js": "/choi/static/js/main.6e35ce71.js",
     "static/media/back04.png": "/choi/static/media/back04.ca85cb55117ee070d3f4.png",
     "static/media/back07.png": "/choi/static/media/back07.71f0f2bc9e11bc3a2e94.png",
     "static/media/back01.png": "/choi/static/media/back01.a36ac8f0a32ca6abcaa5.png",
@@ -14,15 +14,18 @@
     "static/media/tetris.gif": "/choi/static/media/tetris.9ac43366abc34d8eec70.gif",
     "static/media/port03.png": "/choi/static/media/port03.4a7744bea440c3c8da4e.png",
     "static/media/post.png": "/choi/static/media/post.b0319658c8c096fc3910.png",
+    "static/media/green.jpg": "/choi/static/media/green.eb96e5dac9452155433c.jpg",
+    "static/media/inflearn.png": "/choi/static/media/inflearn.d12fb59d3713336ba344.png",
+    "static/media/fastcampus.png": "/choi/static/media/fastcampus.656715a861d9c269f90b.png",
     "static/media/academy.png": "/choi/static/media/academy.1f791e57a24efafbfcc8.png",
     "static/media/s02.jpg": "/choi/static/media/s02.a82adffd61acd22fed0b.jpg",
     "static/media/s04.jpg": "/choi/static/media/s04.00db354363a14a6a7e1a.jpg",
     "index.html": "/choi/index.html",
-    "main.ffaf700a.css.map": "/choi/static/css/main.ffaf700a.css.map",
-    "main.2b81609f.js.map": "/choi/static/js/main.2b81609f.js.map"
+    "main.47012a39.css.map": "/choi/static/css/main.47012a39.css.map",
+    "main.6e35ce71.js.map": "/choi/static/js/main.6e35ce71.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffaf700a.css",
-    "static/js/main.2b81609f.js"
+    "static/css/main.47012a39.css",
+    "static/js/main.6e35ce71.js"
   ]
 }
