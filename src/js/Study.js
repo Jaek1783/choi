@@ -8,11 +8,12 @@ import website from '../img/study/website/website.png';
 
 import Academy from './Academy';
 import Youtube from "./Youtube";
+import Website from "./Website";
 const Study =()=>{
     const study_items = [
         {id:1,name:'Academy',icon:academy, contents:<Academy/>},
         {id:2,name:'Youtube',icon:youtube, contents:<Youtube/>},
-        {id:3,name:'Website',icon:website},
+        {id:3,name:'Website',icon:website, contents:<Website/>},
     ];
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
