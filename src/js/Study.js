@@ -19,9 +19,9 @@ const Study =()=>{
         query:"(min-width:1740px)"
         });
     const item_pc = ["study_item flex item_pc ", styles.subText].join('');
-    const item_mobile = ["study_item item_mobile ", styles.subText].join('');
-    const item_container_pc = "study_item_container flex";
-    const item_container_mobile = "study_item_container";
+    const item_mobile = ["study_item flex item_mobile ", styles.subText].join('');
+    const item_container_pc = "study_item_container study_pc flex";
+    const item_container_mobile = "study_item_container study_mobile";
     return(
     <div>
         <ul className="study_container">

@@ -16,8 +16,12 @@ const Youtube_table02 = ()=>{
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
         });
-return(
-    <ul className={isPc? "flex container_pc":"flex container_mobile"}>
+        const isMobile = useMediaQuery({
+            query:"(max-width:879px)"
+            });
+        const mobile_ck = isMobile? 'youtube_container_mobile flex':'youtube_container_tablet flex';    
+    return(
+        <ul className={isPc? "youtube_container_pc flex":mobile_ck}>
         {youtube_items.map(youtube_item=>{
             return(
                 <li key={youtube_item.name} className="content_item">

@@ -50,9 +50,6 @@
     width:4rem;
     box-sizing: border-box;
 }
-.icon:hover{
-    cursor: pointer;
-}
 .skill_name{
     font-weight:bold;
     font-size:1.3rem;
