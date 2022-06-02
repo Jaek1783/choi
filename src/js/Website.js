@@ -17,7 +17,7 @@ const Website = ()=>{
         query:"(max-width:880px)"
         });
     return(
-    <ul className={isPc? "adress_container_pc flex":"adress_container_mobile flex "}>
+    <ul className={isPc? "adress_container_pc flex":"adress_container_mobile"}>
     {contents.map(adress=>{
         return(
             <li key={adress.name} className={isPc? "adress_item_pc":"adress_item_mobile"}

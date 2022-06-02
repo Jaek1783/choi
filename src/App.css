@@ -21,6 +21,14 @@ header{
   padding: 0.5rem;
   transition:.2s ease-in-out;
 }
+.black{
+  background-color: #000;
+  color:#fff;
+}
+.transparent{
+  background-color: transparent;
+  color:#000;
+}
 h1{
   font-size:1.5rem;
   float:left;

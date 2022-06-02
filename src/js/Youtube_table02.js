@@ -8,10 +8,10 @@ import youtube_icon08 from '../img/study/youtube/s08.jpg';
 
 const Youtube_table02 = ()=>{
     const youtube_items = [
-        {id:5, icon:youtube_icon05, name:'노마드코더'},
-        {id:6, icon:youtube_icon06, name:'데브리'},
-        {id:7, icon:youtube_icon07, name:'생활코딩'},
-        {id:8, icon:youtube_icon08, name:'코지코더'},
+        {id:5, icon:youtube_icon05, name:'노마드코더', adress:'https://www.youtube.com/c/NomadCoders'},
+        {id:6, icon:youtube_icon06, name:'데브리', adress:'https://www.youtube.com/channel/UC1wWTimSew9rYzEZRVYVlbg'},
+        {id:7, icon:youtube_icon07, name:'생활코딩', adress:'https://www.youtube.com/c/%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A91'},
+        {id:8, icon:youtube_icon08, name:'코지코더', adress:'https://www.youtube.com/c/kossiecoder'},
     ];
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
@@ -25,7 +25,9 @@ const Youtube_table02 = ()=>{
         {youtube_items.map(youtube_item=>{
             return(
                 <li key={youtube_item.name} className="content_item">
-                    <p className="youtube_item"><img src={youtube_item.icon} alt={youtube_item.name+'아이콘'}/></p>
+                    <p className="youtube_item"><img src={youtube_item.icon} alt={youtube_item.name+'아이콘'} onClick={()=>{
+                        window.open(youtube_item.adress,'_blank');
+                    }}/></p>
                     <p className="youtubeName">{youtube_item.name}</p>
                 </li>
             )

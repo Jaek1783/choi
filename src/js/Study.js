@@ -28,7 +28,7 @@ const Study =()=>{
             {study_items.map(item=>{
                 return(
                     <li className={isPc? item_container_pc:item_container_mobile } key={item.name}>
-                        <p className={isPc? item_pc:item_mobile}><img src={item.icon} alt={item.name+'아이콘'}/>{item.name}</p>
+                        <p className={isPc? item_pc:item_mobile}><img src={item.icon} alt={item.name+'아이콘'}/>{item.name}<br/><span>{'내용을 클릭하시면'}<br className={isPc? 'br_block': 'br_none'}/>{' 해당 링크로 연결됩니다.'}</span></p>
                         <>{item.contents}</>
                     </li>
                 )

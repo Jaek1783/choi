@@ -6,8 +6,26 @@ import Blog from './js/Blog.js';
 import Skills from './js/Skills';
 import Study from './js/Study';
 import {NavLink, Route, Routes, Link} from 'react-router-dom';
+import React,{useState, useEffect, useRef} from 'react';
+
+const useScroll = ()=>{
+  const [state, setState] = useState({
+    x:0,
+    y:0
+  });
+  const onScroll = (event)=>{
+    console.log("y" , window.scrollY);
+    setState({y:window.scrollY});
+  }
+  useEffect(()=>{
+    window.addEventListener("scroll", onScroll);
+    return()=>window.removeEventListener('scroll',onScroll);
+  },[])
+  return state;
+}
 
 const App = ()=> {
+  const { y } = useScroll();
   const enterBackground = ()=>{
     const header = document.querySelector('header');
     header.style.backgroundColor = '#000';
@@ -18,9 +36,10 @@ const App = ()=> {
     header.style.backgroundColor = 'transparent';
     header.style.color = "#000";
   }
+  // onMouseEnter={()=>{enterBackground();}} onMouseLeave={()=>{leaveBackground();}}
   return (
     <div className="App">
-      <header onMouseEnter={()=>{enterBackground();}} onMouseLeave={()=>{leaveBackground();}}>
+      <header className={y>40? 'black':'transparent'}>
         <h1 className={styles.subText}><Link to ="/choi">Choi-portfolio</Link></h1>
         <nav className="nav">
             <NavLink to = "/choi" className={["nav_item ", styles.subText].join('')}>About me</NavLink>

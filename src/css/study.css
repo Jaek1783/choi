@@ -22,6 +22,11 @@
     box-sizing: border-box;
     padding:2rem 0;
     color:#fff;
+    text-align: center;
+}
+.study_item>span{
+    font-size:.8rem;
+    padding-top:1rem;
 }
 .study_item>img{
     width:5rem;
@@ -34,6 +39,9 @@
     width:200px;
     border-radius: 15px 0 0 15px;
 }
+.study_container>li:last-child>p>img{
+    padding:0 10rem 1rem;
+}
 .item_mobile{
     border-radius: 15px 15px 0 0;
 }
@@ -42,7 +50,12 @@
     align-items: center;
     justify-content: center;
 }
-
+.br_block{
+    display:block;
+}
+.br_none{
+    display:none;
+}
 /* academy Item style */
 .academy_item{
     width:50%;
@@ -50,6 +63,7 @@
 }
 .content_item{
     padding:2rem 0;
+    cursor: pointer;
 }
 .container_pc{
     width:80%;
@@ -91,20 +105,22 @@
 /* Website Item style */
 
 .adress_container_pc{
-    margin-left: 2rem;
+    width:100%;
+    justify-content: space-evenly;
 }
 .adress_container_mobile{
-    flex-direction: column;
-    align-items: center;
+    width:50%;
+    margin:0 auto ;
 }
 .adress_item_pc {
     font-weight: bold;
     list-style-type: lisc ;
-    margin-left:2rem;
+    cursor: pointer;
+
 }
 .adress_item_mobile {
     font-weight: bold;
     padding:1rem;
     list-style-type: lisc ;
-
+    cursor: pointer;
 }
