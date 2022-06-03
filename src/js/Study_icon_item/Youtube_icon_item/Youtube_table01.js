@@ -1,10 +1,10 @@
 import React from "react";
-import '../css/study.css';
+import '../../../css/study.css';
 import {useMediaQuery} from "react-responsive";
-import youtube_icon01 from '../img/study/youtube/s01.jpg';
-import youtube_icon02 from '../img/study/youtube/s02.jpg';
-import youtube_icon03 from '../img/study/youtube/s03.jpg';
-import youtube_icon04 from '../img/study/youtube/s04.jpg';
+import youtube_icon01 from '../../../img/study/youtube/s01.jpg';
+import youtube_icon02 from '../../../img/study/youtube/s02.jpg';
+import youtube_icon03 from '../../../img/study/youtube/s03.jpg';
+import youtube_icon04 from '../../../img/study/youtube/s04.jpg';
 
 const Youtube_table01 = ()=>{
     const youtube_items = [

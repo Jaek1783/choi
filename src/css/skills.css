@@ -4,18 +4,21 @@
     margin-bottom:.5rem;
 }
 .skills_container_box{
-    padding-top:3rem;
+    padding-top:5rem;
 }
 .skills_container{
     width:45%;
     margin:1rem auto;
 }
 .skills_mobile{
-    width:45%;
+    width:80%;
     margin:3rem auto;
 }
-.skill_container{
+.skill_container_pc{
     display: flex;
+}
+.skill_container_mobile{
+    width:100%;
 }
 @keyframes rotateY {
     0%{
@@ -29,7 +32,6 @@
     }
 }
 .skill_item{
-    width:100%;
     border-radius: 15px;
     background-color: #131361;
     box-sizing: border-box;
@@ -37,11 +39,11 @@
     margin-right:1rem;
     position: relative;
     margin-bottom:1rem;
-    transition: all 0.5s linear;
     transition: 0.2s ease-in-out;
     animation-duration: 1s;
     animation-name: rotateY;
     animation-direction: alternate;
+    box-shadow: 5px 11px 30px rgba(0,0,0,0.3);
 }
 .skill_item:hover{
     background-color: #2e2e8d;

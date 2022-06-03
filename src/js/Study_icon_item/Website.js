@@ -1,6 +1,7 @@
 import React from "react";
-import '../css/study.css';
+import '../../css/study.css';
 import {useMediaQuery} from "react-responsive";
+import Website_icon_item from "./Website_icon_item/Website_icon_item";
 
 const Website = ()=>{
     const contents = [
@@ -13,19 +14,9 @@ const Website = ()=>{
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
         });
-    const isMobile = useMediaQuery({
-        query:"(max-width:880px)"
-        });
     return(
     <ul className={isPc? "adress_container_pc flex":"adress_container_mobile"}>
-    {contents.map(adress=>{
-        return(
-            <li key={adress.name} className={isPc? "adress_item_pc":"adress_item_mobile"}
-            onClick={(e)=>{
-                window.open(adress.adress,'_blank');
-                }}>{adress.name}</li>
-        )
-    })}
+        <Website_icon_item contents={contents}/>
     </ul>
     )
 }; export default Website;

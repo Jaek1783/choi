@@ -1,7 +1,7 @@
 import React from "react";
-import '../css/study.css';
+import '../../css/study.css';
 import {useMediaQuery} from "react-responsive";
-import Academy_items from "./Academy_items";
+import Academy_items from "./Academy_icon_item/Academy_items";
 const Academy = ()=>{
     const isPc = useMediaQuery({
         query:"(min-width:880px)"

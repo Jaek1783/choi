@@ -14,7 +14,6 @@ const useScroll = ()=>{
     y:0
   });
   const onScroll = (event)=>{
-    console.log("y" , window.scrollY);
     setState({y:window.scrollY});
   }
   useEffect(()=>{
@@ -26,20 +25,9 @@ const useScroll = ()=>{
 
 const App = ()=> {
   const { y } = useScroll();
-  const enterBackground = ()=>{
-    const header = document.querySelector('header');
-    header.style.backgroundColor = '#000';
-    header.style.color = "#fff";
-  }
-  const leaveBackground = ()=>{
-    const header = document.querySelector('header');
-    header.style.backgroundColor = 'transparent';
-    header.style.color = "#000";
-  }
-  // onMouseEnter={()=>{enterBackground();}} onMouseLeave={()=>{leaveBackground();}}
   return (
     <div className="App">
-      <header className={y>40? 'black':'transparent'}>
+      <header className={y>39? 'black':'transparent'}>
         <h1 className={styles.subText}><Link to ="/choi">Choi-portfolio</Link></h1>
         <nav className="nav">
             <NavLink to = "/choi" className={["nav_item ", styles.subText].join('')}>About me</NavLink>

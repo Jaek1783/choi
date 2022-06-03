@@ -12,7 +12,7 @@ const Icon_item01 = ()=>{
         query:"(min-width:800px)"
         });
     return (
-            <div className={isPc? "skill_container" : ''}>
+            <div className={isPc? "skill_container_pc" : 'skill_container_mobile'}>
             {default_items.map(default_item=>{
                 return(
                     <dl className="skill_item" key={default_item.id}>

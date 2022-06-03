@@ -1,4 +1,4 @@
-import styles from '../css/text.module.css';
+import React from "react";
 import {useMediaQuery} from "react-responsive";
 import '../css/blog.css';
 import back01 from '../img/blog/back01.png';
@@ -8,6 +8,7 @@ import back04 from '../img/blog/back04.png';
 import back05 from '../img/blog/back05.png';
 import back06 from '../img/blog/back06.png';
 import back07 from '../img/blog/back07.png';
+import Blog_icon_item from "./Blog_icon_item/blog_icon_item";
 function Blog(){
     const blog = [
         {date: '2022.03.01 ~ 2022.03 27', text: '0ssaem.com 포트폴리오 제작', img:back01, id:1},
@@ -30,19 +31,7 @@ function Blog(){
                 <h2>
                 </h2>
                 <ul className={isPc? "blogBox":"blogMBox"}>
-                {blog.map(content=>{
-                    return(
-                        <li className={styles.text} key={content.id}>
-                            <dl className="date date01 odd">
-                                <dt>
-                                    <p>{content.date}</p>
-                                    <p className={styles.textKr}>{content.text}</p>
-                                </dt>
-                                <dd><img src={content.img} alt="디자인이미지"/></dd>
-                            </dl>
-                        </li>
-                    )
-                })}
+                    <Blog_icon_item blog={blog}/>
                 </ul>
             </div>
         </div>
