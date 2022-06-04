@@ -69,6 +69,34 @@
     margin-left:2rem;
     box-sizing: border-box;
 }
+
+.academy_modal{
+    width:50%;
+    height:70vh;
+    position:fixed;
+    top:10%;
+    left:25%;
+    z-index: 100;
+    display:none;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding:1rem;
+    box-sizing: border-box;
+}
+.Certificates{
+    width:30%;
+    position:relative;
+}
+.close{
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index: 101;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}
 /* youtube Item Style */
 .youtube_item{
     width:4rem;

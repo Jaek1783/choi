@@ -17,7 +17,8 @@ function Blog(){
         {date: '2022.03.30 ~ 2022.04.01', text: '부산여행', img:back04, id:4},
         {date: '2022.04.05 ~ 2022.04.18', text: '리액트로 만드는 Choi-portfolio 포트폴리오 제작', img:back05, id:5},
         {date: '2022.04.24 ~ 2022.04.28', text: '리액트로 만드는 CRUD 프론트엔드 게시판 제작', img:back06, id:6},
-        {date: '2022.05.01 ~ 2022.05.25', text: '리액트로 만드는 샐러드 판매 사이트 제작', img:back07, id:7}
+        {date: '2022.05.01 ~ 2022.05.25', text: '리액트로 만드는 샐러드 판매 사이트 제작', img:back07, id:7},
+        {date: '2022.05.26 ~ 2022.06.03', text: 'Choi-Portfolio 업데이트', img:back05, id:8},
     ];
     const isPc = useMediaQuery({
         query:"(min-width:800px)"

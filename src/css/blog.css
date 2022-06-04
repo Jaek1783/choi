@@ -56,6 +56,11 @@
     left:0;
     margin-bottom: 3rem;
 }
+.blogBox>li:nth-child(8){
+    top:76rem;
+    right:0;
+    margin-bottom: 3rem;
+}
 .date>dt{
     padding:4rem 1rem;
     font-size:0.95rem;

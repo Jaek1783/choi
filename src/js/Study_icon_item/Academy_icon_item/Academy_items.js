@@ -1,20 +1,27 @@
-import React from "react";
-
-import academy01 from '../../../img/study/academy/green.jpg';
-import academy02 from '../../../img/study/academy/inflearn.png';
-import academy03 from '../../../img/study/academy/sparta.png';
-const Academy_items = ()=>{
-    const items = [
-        {name:'green',img:academy01},
-        {name:'inf',img:academy02},
-        {name:'sparta',img:academy03},
-    ];
+import React, { useLayoutEffect } from "react";
+import close from '../../../img/icon/cancel.png';
+const Academy_items = (props)=>{
     return(
     <>
-    {items.map(item=>{
+    {props.items.map(item=>{
         return(
-            <li key={item.name} className="content_item academy_item"><img src={item.img} alt={item.name+"이미지"} /></li>
-        )
+            <li key={item.name} className="content_item academy_item"><img src={item.img} alt={item.name+"이미지"} onClick={()=>{
+                const modal = document.querySelectorAll('.academy_modal');
+                modal[item.id-1].style.display= 'block';
+            }}/>
+                <div>
+                    <div className="academy_modal">
+                        <div className="Certificates">
+                            <img src={item.Certificates} alt={item.name+'수료증'} />
+                        </div>
+                        <img src={close} alt="닫기 이미지" className="close" onClick={()=>{
+                            const modal = document.querySelectorAll('.academy_modal');
+                            modal[item.id-1].style.display= 'none';
+                        }}/>
+                    </div>
+                </div>
+            </li>
+        )   
     })}
     </>
 )}; export default Academy_items;
