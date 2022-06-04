@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/choi/static/css/main.6cf43484.css",
-    "main.js": "/choi/static/js/main.a20291eb.js",
+    "main.js": "/choi/static/js/main.f00b903c.js",
     "static/media/back04.png": "/choi/static/media/back04.ca85cb55117ee070d3f4.png",
     "static/media/back07.png": "/choi/static/media/back07.71f0f2bc9e11bc3a2e94.png",
     "static/media/back01.png": "/choi/static/media/back01.a36ac8f0a32ca6abcaa5.png",
     "static/media/back03.png": "/choi/static/media/back03.3c26284c1947a225bd5c.png",
     "static/media/salad.png": "/choi/static/media/salad.6807f263ccf57ebd360f.png",
+    "static/media/green_Certificates02.png": "/choi/static/media/green_Certificates02.feaf3f224851422bb156.png",
+    "static/media/green_Certificates04.png": "/choi/static/media/green_Certificates04.23d86ca42f1cb9ba01cf.png",
+    "static/media/green_Certificates01.png": "/choi/static/media/green_Certificates01.20c6232c1060de6e3ed9.png",
+    "static/media/green_Certificates03.png": "/choi/static/media/green_Certificates03.00e47b3fcf21ded25fe7.png",
+    "static/media/inflearn_Certificates01.png": "/choi/static/media/inflearn_Certificates01.26805e78435b42ec07ac.png",
     "static/media/port01.png": "/choi/static/media/port01.d9d9d68c69d57574ed3a.png",
     "static/media/back06.png": "/choi/static/media/back06.f94f1c9f097b2762239b.png",
-    "static/media/inflearn_Certificates01.png": "/choi/static/media/inflearn_Certificates01.9595a61be89ac0dcf8c0.png",
+    "static/media/inflearn_Certificates02.png": "/choi/static/media/inflearn_Certificates02.9595a61be89ac0dcf8c0.png",
     "static/media/back02.png": "/choi/static/media/back02.28575343fca22a9e0fc6.png",
     "static/media/back05.png": "/choi/static/media/back05.76369499b4464fd20455.png",
     "static/media/tetris.gif": "/choi/static/media/tetris.9ac43366abc34d8eec70.gif",
@@ -24,10 +29,10 @@
     "static/media/s04.jpg": "/choi/static/media/s04.00db354363a14a6a7e1a.jpg",
     "index.html": "/choi/index.html",
     "main.6cf43484.css.map": "/choi/static/css/main.6cf43484.css.map",
-    "main.a20291eb.js.map": "/choi/static/js/main.a20291eb.js.map"
+    "main.f00b903c.js.map": "/choi/static/js/main.f00b903c.js.map"
   },
   "entrypoints": [
     "static/css/main.6cf43484.css",
-    "static/js/main.a20291eb.js"
+    "static/js/main.f00b903c.js"
   ]
 }
