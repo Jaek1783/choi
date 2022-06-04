@@ -5,11 +5,12 @@ import Academy_items from "./Academy_icon_item/Academy_items";
 import academy01 from '../../img/study/academy/green.jpg';
 import academy02 from '../../img/study/academy/inflearn.png';
 import academy03 from '../../img/study/academy/sparta.png';
-import Inflearn_Certificates from '../../img/study/academy/inflearn_Certificates01.png';
+import Inflearn from "./Academy_icon_item/Inflearn";
+import Green from "./Academy_icon_item/Green";
 const Academy = ()=>{
     const items = [
-        {name:'green',img:academy01, id:1},
-        {name:'inf',img:academy02, Certificates:Inflearn_Certificates, id:2},
+        {name:'green',img:academy01,certificates:<Green/>, id:1},
+        {name:'inf',img:academy02,certificates:<Inflearn/>, id:2},
         {name:'sparta',img:academy03, id:3},
     ];
     const isPc = useMediaQuery({

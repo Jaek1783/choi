@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import close from '../../../img/icon/cancel.png';
+import Academy_icon_item from "./Academy_icon_item";
 const Academy_items = (props)=>{
     return(
     <>
@@ -11,9 +12,7 @@ const Academy_items = (props)=>{
             }}/>
                 <div>
                     <div className="academy_modal">
-                        <div className="Certificates">
-                            <img src={item.Certificates} alt={item.name+'수료증'} />
-                        </div>
+                        <Academy_icon_item item={item}/>
                         <img src={close} alt="닫기 이미지" className="close" onClick={()=>{
                             const modal = document.querySelectorAll('.academy_modal');
                             modal[item.id-1].style.display= 'none';
