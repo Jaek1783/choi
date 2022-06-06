@@ -14,8 +14,12 @@ const Website = ()=>{
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
         });
+        const isTablet = useMediaQuery({
+            query:"(min-width:880px)"
+            });
+        const checkTablet = isTablet? 'adress_container_tablet flex':'adress_container_mobile';      
     return(
-    <ul className={isPc? "adress_container_pc flex":"adress_container_mobile"}>
+    <ul className={isPc? "adress_container_pc flex":checkTablet}>
         <Website_icon_item contents={contents}/>
     </ul>
     )

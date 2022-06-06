@@ -157,9 +157,15 @@
     font-size:2rem;
     justify-content: space-evenly;
 }
+.adress_container_tablet{
+    margin:0 auto ;
+    justify-content: space-evenly;
+
+}
 .adress_container_mobile{
     width:50%;
     margin:0 auto ;
+    text-align: center;
 }
 .adress_item_pc {
     font-weight: bold;
@@ -167,9 +173,16 @@
     cursor: pointer;
 
 }
+.adress_item_tablet {
+    font-weight: bold;
+    margin-left: 3rem;
+    padding:1rem .5rem;
+    list-style-type: lisc ;
+    cursor: pointer;
+}
 .adress_item_mobile {
     font-weight: bold;
-    padding:1rem;
+    padding:.5rem;
     list-style-type: lisc ;
     cursor: pointer;
 }

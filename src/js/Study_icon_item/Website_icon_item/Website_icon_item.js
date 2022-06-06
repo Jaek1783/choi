@@ -12,7 +12,7 @@ const Website_icon_item = (props)=>{
         <>
             {props.contents.map(adress=>{
         return(
-            <li key={adress.name} className={isPc? "adress_item_pc":"adress_item_mobile"}
+            <li key={adress.name} className={isPc? "adress_item_pc":checkTablet}
             onClick={(e)=>{
                 window.open(adress.adress,'_blank');
                 }}>{adress.name}</li>
