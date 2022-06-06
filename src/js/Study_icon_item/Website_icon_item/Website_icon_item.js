@@ -4,6 +4,10 @@ const Website_icon_item = (props)=>{
     const isPc = useMediaQuery({
         query:"(min-width:1740px)"
         });
+    const isTablet = useMediaQuery({
+        query:"(min-width:880px)"
+        });
+    const checkTablet = isTablet? 'adress_item_tablet':'adress_item_mobile';    
     return(
         <>
             {props.contents.map(adress=>{

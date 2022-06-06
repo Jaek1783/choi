@@ -11,7 +11,7 @@ const Academy = ()=>{
     const items = [
         {name:'green',img:academy01,certificates:<Green/>, id:1},
         {name:'inf',img:academy02,certificates:<Inflearn/>, id:2},
-        {name:'sparta',img:academy03, id:3},
+        {name:'sparta',img:academy03,certificates:'아직 수료된 강의가 없습니다.', id:3},
     ];
     const isPc = useMediaQuery({
         query:"(min-width:880px)"
