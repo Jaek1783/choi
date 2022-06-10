@@ -93,16 +93,15 @@
     overflow: hidden;
 }
 .Certificates_item{
-    width:500%;
+    width:400%;
 }
 .transition{
     transition: .3s ease-in-out;
 }
 .green_item{
-    width:25rem;
+    width:20rem;
     padding:1rem;
-    margin-right:8rem;
-    margin-left:8rem;
+    margin:0 auto;
 }
 .inf_item{
     width:40rem;
@@ -115,8 +114,6 @@
     top:10px;
     right:10px;
     z-index: 101;
-    background-color: #e2e2e2;
-    border-radius: 50%;
 }
 /* youtube Item Style */
 .youtube_item{
@@ -193,8 +190,6 @@ button{
     transform: translate(-50%);
     background: transparent;
     border:none;
-    background-color: #e2e2e2;
-    border-radius: 50%;
     width:40px;
     padding:2px 2px 0 2px;
     top:40%;

@@ -9,13 +9,12 @@ const Green = ()=>{
         {Green_item:Green02, alt:'그린02'},
         {Green_item:Green03, alt:'그린03'},
         {Green_item:Green04, alt:'그린04'},
-        {Green_item:Green01, alt:'그린05'},
     ];
     return(
         <>
         {Green_items.map(green_item=>{
             return(
-                <div key={green_item.alt} className="green_item _item">
+                <div key={green_item.alt} className="green_item">
                     <img src={green_item.Green_item} alt={green_item.alt+'수료증'} />
                 </div>
             )

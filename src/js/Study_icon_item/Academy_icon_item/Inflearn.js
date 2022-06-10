@@ -5,9 +5,6 @@ const Inflearn = ()=>{
     const Inflearn_items = [
         {inflearn_item:Inflearn01, alt:'인프런01'},
         {inflearn_item:Inflearn02, alt:'인프런02'},
-        {inflearn_item:Inflearn01, alt:'인프런03'},
-        {inflearn_item:Inflearn02, alt:'인프런04'},
-        {inflearn_item:Inflearn01, alt:'인프런05'},
     ]
     return(
         <>
