@@ -1,7 +1,11 @@
 import React, {useState, useRef, useEffect } from "react";
 import close from '../../../img/icon/cancel.png';
 import Academy_icon_item from "./Academy_icon_item";
+import {useMediaQuery} from "react-responsive";
 const Academy_items = (props)=>{
+    const isPc = useMediaQuery({
+        query:"(min-width:810px)"
+        });
     return(
     <>
     {props.items.map(item=>{
@@ -13,7 +17,7 @@ const Academy_items = (props)=>{
                 modal[item.id-1].style.display= 'block';
             }}/>
                 <>
-                    <div className="academy_modal">
+                    <div className={isPc? "academy_modal academy_pc_modal":"academy_modal academy_mobile_modal"}>
                         <Academy_icon_item item={item} className="academy_item"/>
                         <img src={close} alt="닫기 이미지" className="close" onClick={()=>{
                             const modal = document.querySelectorAll('.academy_modal');
