@@ -28,9 +28,9 @@ const App = ()=> {
   return (
     <div className="App">
       <header className={y>39? 'black':'transparent'}>
-        <h1 className={styles.subText}><Link to ="/">Choi-portfolio</Link></h1>
+        <h1 className={styles.subText}><Link to ="/choi">Choi-portfolio</Link></h1>
         <nav className="nav">
-            <NavLink to = "/" className={["nav_item ", styles.subText].join('')}>About me</NavLink>
+            <NavLink to = "/choi" className={["nav_item ", styles.subText].join('')}>About me</NavLink>
             <NavLink to = "/skills" className={["nav_item ", styles.subText].join('')}>Skills</NavLink>
             <NavLink to = "/study" className={["nav_item ", styles.subText].join('')}>Study</NavLink>
             <NavLink to = "/portfolio" className={["nav_item ", styles.subText].join('')}>Portfolio</NavLink>
@@ -38,7 +38,7 @@ const App = ()=> {
         </nav>
       </header>
       <Routes>
-        <Route path="/" element={<About/>}/>
+        <Route path="/choi" element={<About/>}/>
         <Route path="/skills" element={<Skills/>}/>
         <Route path="/study" element={<Study/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
