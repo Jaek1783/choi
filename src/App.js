@@ -28,21 +28,21 @@ const App = ()=> {
   return (
     <div className="App">
       <header className={y>39? 'black':'transparent'}>
-        <h1 className={styles.subText}><Link to ="/choi/">Choi-portfolio</Link></h1>
+        <h1 className={styles.subText}><Link to ="/">Choi-portfolio</Link></h1>
         <nav className="nav">
-            <NavLink to = "/choi/" className={["nav_item ", styles.subText].join('')}>About me</NavLink>
-            <NavLink to = "/choi/skills" className={["nav_item ", styles.subText].join('')}>Skills</NavLink>
-            <NavLink to = "/choi/study" className={["nav_item ", styles.subText].join('')}>Study</NavLink>
-            <NavLink to = "/choi/portfolio" className={["nav_item ", styles.subText].join('')}>Portfolio</NavLink>
-            <NavLink to = "/choi/blog" className={["nav_item ", styles.subText].join('')}>Blog</NavLink>
+            <NavLink to = "/" className={["nav_item ", styles.subText].join('')}>About me</NavLink>
+            <NavLink to = "/skills" className={["nav_item ", styles.subText].join('')}>Skills</NavLink>
+            <NavLink to = "/study" className={["nav_item ", styles.subText].join('')}>Study</NavLink>
+            <NavLink to = "/portfolio" className={["nav_item ", styles.subText].join('')}>Portfolio</NavLink>
+            <NavLink to = "/blog" className={["nav_item ", styles.subText].join('')}>Blog</NavLink>
         </nav>
       </header>
       <Routes>
-        <Route path="/choi/" element={<About/>}/>
-        <Route path="/choi/skills" element={<Skills/>}/>
-        <Route path="/choi/study" element={<Study/>}/>
-        <Route path="/choi/portfolio" element={<Portfolio/>}/>
-        <Route path="/choi/blog" element={<Blog/>}/>
+        <Route path="/" element={<About/>}/>
+        <Route path="/skills" element={<Skills/>}/>
+        <Route path="/study" element={<Study/>}/>
+        <Route path="/portfolio" element={<Portfolio/>}/>
+        <Route path="/blog" element={<Blog/>}/>
       </Routes>
     </div>
   )
