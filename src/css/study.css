@@ -95,7 +95,6 @@
 .Certificates{
     /* width:42rem; */
     width:90%;
-    background-color: aqua;
     color:#fff;
     position:relative;
     overflow: hidden;
@@ -118,7 +117,7 @@ button{
     right:0;
 }
 .prev_btn{
-    left:8%;
+    left:5%;
 }
 .transition{
     transition: .3s ease-in-out;
