@@ -4,7 +4,7 @@
 }
 .blogBox{
   width:46rem;
-  height:95rem;
+  height:117rem;
   padding-top:4rem;
   margin:0 auto;
   position:relative;
@@ -59,6 +59,11 @@
 .blogBox>li:nth-child(8){
     top:76rem;
     right:0;
+    margin-bottom: 3rem;
+}
+.blogBox>li:nth-child(9){
+    top:100rem;
+    left:0;
     margin-bottom: 3rem;
 }
 .date>dt{

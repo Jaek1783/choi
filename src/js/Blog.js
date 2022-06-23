@@ -19,6 +19,7 @@ function Blog(){
         {date: '2022.04.24 ~ 2022.04.28', text: '리액트로 만드는 CRUD 프론트엔드 게시판 제작', img:back06, id:6},
         {date: '2022.05.01 ~ 2022.05.25', text: '리액트로 만드는 샐러드 판매 사이트 제작', img:back07, id:7},
         {date: '2022.05.26 ~ 2022.06.10', text: 'Choi-Portfolio 업데이트', img:back05, id:8},
+        {date: '2022.06.22 ~ 2022.06.23', text: '리덕스로 만드는 CRUD 프론트엔드 게시판 제작', img:back06, id:9},
     ];
     const isPc = useMediaQuery({
         query:"(min-width:800px)"

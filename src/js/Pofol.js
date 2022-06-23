@@ -1,9 +1,10 @@
 import styles from '../css/text.module.css';
 import pofol01 from '../img/portfolio/port01.png';
 import pofol02 from '../img/portfolio/tetris.gif';
-import pofol03 from '../img/portfolio/port03.png';
+import pofol03 from '../img/portfolio/bootstrap.png';
 import pofol04 from '../img/portfolio/post.png';
 import pofol05 from '../img/portfolio/salad.png';
+import pofol06 from '../img/portfolio/redux.png';
 import React,{useState} from 'react';
 import {useMediaQuery} from "react-responsive";
 import '../css/portfolio.css';
@@ -26,10 +27,10 @@ function Portfolio(){
        },
        {main: <img src={pofol03} alt="포트폴리오 사진03"/>,
        title: '[Bootstrap coding site] introduce My Self',
-       detail01:'부트스트랩으로 만든 자기소개 페이지',
+       detail01:'부트스트랩으로 만든 간단한 소개 페이지',
        detail02:'부트스트랩 사용 스킬 공부를 위해 제작',
-       detail03:'경력, 스킬, 포부 등의 소개',
-       adress: 'https://jaek1783.github.io/myself',
+       detail03:'경력, 포부의 소개',
+       adress: 'https://jaek1783.github.io/Bootstrap',
        id:3
       },             
        {main: <img src={pofol04} alt="포트폴리오 사진04"/>,
@@ -46,13 +47,21 @@ function Portfolio(){
        detail03:'페이지 업그레이드 진행 중',
        adress: 'https://jaek1783.github.io/salad',
        id:5
+      },             
+       {main: <img src={pofol06} alt="포트폴리오 사진06"/>,
+       title: '[Redux in React]',
+       detail01:'리덕스를 사용한 리액트 페이지',
+       detail02:'Create, Update, Delete로 페이지 업데이트',
+       detail03:'Redux 공부를 위해 만든 클론코딩 웹페이지',
+       adress: 'https://jaek1783.github.io/reduxStudy',
+       id:6
       }             
     ];
     const isPc = useMediaQuery({
-        query:"(min-width:1520px)"
+        query:"(min-width:1820px)"
         });
     const isTablet = useMediaQuery({
-        query:"(max-width:1521px) and (min-width: 1400px)" 
+        query:"(max-width:1819px) and (min-width: 1400px)" 
     });
     const isMobile = useMediaQuery({
         query:"(max-width:1399px)"
