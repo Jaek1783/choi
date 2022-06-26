@@ -8,6 +8,7 @@ import { Route, Routes} from 'react-router-dom';
 import React from 'react';
 import Study from './js/Study';
 import Practice from './js/Practice';
+import Theory from './js/Theory';
 
 const App = ()=> {
   return (
@@ -18,8 +19,8 @@ const App = ()=> {
         <Route path="/choi" element={<About/>}/>
         <Route path="/skills" element={<Skills/>}/>
         <Route path="/study" element={<Study/>}/>
-        <Route path="/study/:practice" element={<Practice/>}/>
-        <Route path="/study/theory" element={''}/>
+        <Route path="/study/practice" element={<Practice/>}/>
+        <Route path="/study/theory" element={<Theory/>}/>
         <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/blog" element={<Blog/>}/>
       </Routes>

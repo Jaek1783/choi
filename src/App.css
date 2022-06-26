@@ -36,7 +36,7 @@ h1{
 }
 .nav{
   padding-top:.5rem;
-  display: inline-block;
+  display: flex;
   padding-left:2rem;
 }
 .nav_item{
