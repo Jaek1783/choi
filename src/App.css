@@ -63,3 +63,6 @@ h1{
   padding:.3rem;
   border-radius: 10px;
 }
+.subNav_container{
+  display:none;
+}
