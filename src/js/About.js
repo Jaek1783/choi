@@ -1,10 +1,10 @@
 import styles from '../css/text.module.css';
+import styled from 'styled-components';
 import '../css/about.css';
 const AboutT = ()=>{
     return(
-        <div>
-            <div id="about" className="wrap">
-            <h2 className={styles.subText}>
+            <StyledWrap id="about" className="wrap">
+            <h2 className={styles.subText}>card about me
             </h2>
                 <dl className="boxPc">
                     <dt className="title">
@@ -19,9 +19,24 @@ const AboutT = ()=>{
                         <p className={styles.textKr}> 감사합니다.</p>
                     </dd>
                 </dl>
-            </div>           
-        </div>
+            </StyledWrap>           
     )
 };
 
 export default AboutT;
+
+const StyledWrap = styled.div`
+width:30rem;
+display:table;
+position:absolute;
+top:25%;
+left:38%;
+background-color: #131361;
+border-radius: 15px;
+box-sizing: border-box;
+transition: 0.2s ease-in-out;
+animation-duration: 1s;
+animation-name: slideIn;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+`;

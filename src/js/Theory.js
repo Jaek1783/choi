@@ -3,8 +3,10 @@ import {Link, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 import What_is_Javascript from "./Theory_item/What_is_Javascript";
 import Es6 from "./Theory_item/Es6";
+import Const from './Theory_item/Const';
 import Variable from './Theory_item/Variable';
-
+import Management from './Theory_item/Management';
+import Componenet from './Theory_item/Component';
 const Theory = ()=>{
     return(
         <StyledDiv>
@@ -12,19 +14,19 @@ const Theory = ()=>{
                 <ul>
                     <li><Link to ="WhatIsJavascript">자바스크립트란?</Link></li>
                     <li><Link to ="es6">ES5와 ES6버전의 차이</Link></li>
-                    <li><Link to ="variable">const, var, let의 차이</Link></li>
-                    <li><Link to ="component">리액트의<br/>클래스형 컴포넌트와 함수형 컴포넌트</Link></li>
-                    <li><Link to ="management">리액트에서의 상태관리</Link></li>
-                    <li><Link to ="reactRedux">리액트에서의 리덕스</Link></li>
+                    <li><Link to ="const">const</Link></li>
+                    <li><Link to ="variable">var, let의 차이</Link></li>
+                    <li><Link to ="management">라이프사이클이란?</Link></li>
+                    <li><Link to ="component">라이프사이클 함수</Link></li>
                 </ul>
             </StyledArticle>
             <Routes>
                 <Route path="WhatIsJavascript" element={<What_is_Javascript/>}/>
                 <Route path="es6" element={<Es6/>}/>
+                <Route path="const" element={<Const/>}/>
                 <Route path="variable" element={<Variable/>}/>
-                <Route path="component" element={''}/>
-                <Route path="management" element={''}/>
-                <Route path="reactRedux" element={''}/>
+                <Route path="management" element={<Management/>}/>
+                <Route path="component" element={<Componenet/>}/>
             </Routes>
                 
         </StyledDiv>

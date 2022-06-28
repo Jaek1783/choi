@@ -35,6 +35,6 @@ const StyledUl = styled.ul`
 `;
 const StyledLi = styled.li`
     list-style-type:square;
-    padding-top:2rem;
+    padding-top:1rem;
     line-height:2rem;
 `;

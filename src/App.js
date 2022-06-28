@@ -1,4 +1,5 @@
 import './App.css';
+
 import Header from './Header';
 import About from './js/About.js';
 import Portfolio from './js/Pofol.js';
@@ -6,7 +7,6 @@ import Blog from './js/Blog.js';
 import Skills from './js/Skills';
 import { Route, Routes} from 'react-router-dom';
 import React from 'react';
-// import Study from './js/Study';
 import Practice from './js/Practice';
 import Theory from './js/Theory';
 
