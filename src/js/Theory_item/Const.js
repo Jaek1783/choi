@@ -34,7 +34,6 @@ const What_is_Javascript = () => {
 export default What_is_Javascript;
 
 const StyledUl = styled.ul`
-    width:35%;
     margin: 0 auto 1rem;
     border: 1px solid #131361;
     padding:0 3rem 1rem;

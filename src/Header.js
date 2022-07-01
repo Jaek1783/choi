@@ -1,8 +1,10 @@
 import {NavLink, Link} from 'react-router-dom';
 import React,{useState, useEffect,useRef} from 'react';
+import { useSelector } from "react-redux";
 import styles from './css/text.module.css';
 import styled from 'styled-components';
 const useScroll = ()=>{
+    
     const [state, setState] = useState({
       x:0,
       y:0
@@ -17,6 +19,8 @@ const useScroll = ()=>{
     return state;
   }
 const Header = () =>{
+    const data = useSelector((state) => state.Header.Nav);
+    console.log(data);
     const { y } = useScroll();
     const navRef = useRef(null);
     const subRef = useRef(null);
@@ -46,26 +50,26 @@ const Header = () =>{
                     <li className={["nav_item ", styles.subText].join('')}>
                         <NavLink to = "/choi"
                             onClick={removeActive}
-                        >About me</NavLink>
+                        >나에 대하여</NavLink>
                     </li>
                     <li className={["nav_item ", styles.subText].join('')}>
                         <NavLink to = "/skills"
                             onClick={removeActive}
-                        >Skills</NavLink>
+                        >나의 기술들</NavLink>
                     </li>
                     <li className={["nav_item ", styles.subText].join('')} ref={navRef}>
                         <NavLink to = "/study/:"
                             onClick={(e)=>{
                                 e.preventDefault();
                     }}
-                    >Study</NavLink></li>
+                    >나의 공부들</NavLink></li>
                     <li className={["nav_item ", styles.subText].join('')}>
                         <NavLink to = "/portfolio"
                             onClick={removeActive}
-                        >Portfolio</NavLink>
+                        >나의 코딩들</NavLink>
                     </li>
                     <li className={["nav_item ", styles.subText].join('')}>
-                        <NavLink to = "/blog" >Blog</NavLink>
+                        <NavLink to = "/blog" >나의 행적들</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -73,10 +77,10 @@ const Header = () =>{
                 <StyledUl className={['subNav ', styles.subText].join('')} >
                     <NavLink to = "/study/practice" className="nav_item"
                         onClick={addActive}
-                    >Practice</NavLink>
+                    >수강강의들</NavLink>
                     <NavLink to = "/study/theory/WhatIsJavascript" className="nav_item"
                     onClick={addActive}
-                    >Theory</NavLink>
+                    >이론들</NavLink>
                 </StyledUl>
             </div>
       </header>

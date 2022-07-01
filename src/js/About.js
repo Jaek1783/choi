@@ -27,10 +27,10 @@ export default AboutT;
 
 const StyledWrap = styled.div`
 width:30rem;
-display:table;
-position:absolute;
-top:25%;
-left:38%;
+margin:10rem auto 0;
+// position:absolute;
+// top:25%;
+// left:33.3%;
 background-color: #131361;
 border-radius: 15px;
 box-sizing: border-box;
@@ -39,4 +39,5 @@ animation-duration: 1s;
 animation-name: slideIn;
 animation-direction: alternate;
 animation-iteration-count: infinite;
+text-align:center;
 `;

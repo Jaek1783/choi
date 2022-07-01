@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 const Es6= () => {
     return (
-        <StyledDiv>
             <StyledTable>
                 <thead>
                     <tr>
                         <th>버전</th>
-                        <th>출시년도</th>
+                        <th>출시<br/>년도</th>
                         <th>특징</th>
                     </tr>
                 </thead>
@@ -40,15 +39,10 @@ const Es6= () => {
                     </tr>
                 </tbody>
             </StyledTable>
-        </StyledDiv>
     );
 };
 
 export default Es6;
-
-const StyledDiv = styled.div`
-    padding-left:25rem;
-`;
 const StyledTable = styled.table`
     width:100%;
     margin:0 auto;

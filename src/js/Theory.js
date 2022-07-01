@@ -20,15 +20,16 @@ const Theory = ()=>{
                     <li><Link to ="component">라이프사이클 함수</Link></li>
                 </ul>
             </StyledArticle>
-            <Routes>
-                <Route path="WhatIsJavascript" element={<What_is_Javascript/>}/>
-                <Route path="es6" element={<Es6/>}/>
-                <Route path="const" element={<Const/>}/>
-                <Route path="variable" element={<Variable/>}/>
-                <Route path="management" element={<Management/>}/>
-                <Route path="component" element={<Componenet/>}/>
-            </Routes>
-                
+            <StyledRoutes>
+                <Routes>
+                    <Route path="WhatIsJavascript" element={<What_is_Javascript/>}/>
+                    <Route path="es6" element={<Es6/>}/>
+                    <Route path="const" element={<Const/>}/>
+                    <Route path="variable" element={<Variable/>}/>
+                    <Route path="management" element={<Management/>}/>
+                    <Route path="component" element={<Componenet/>}/>
+                </Routes>
+            </StyledRoutes>      
         </StyledDiv>
     )
 }; export default Theory;
@@ -37,8 +38,12 @@ const StyledDiv = styled.div`
     display:flex;
     margin-top:5rem;
 `;
+
+const StyledRoutes = styled.div`
+    width:70%;
+    margin:0 auto;
+`;
 const StyledArticle = styled.article`
-    position:fixed;
     margin: 0 2rem;
     width:16.25rem;
     height:700px;
