@@ -2,46 +2,42 @@
 
 const initState = {
     Article : [
-        {id:1, title:"자기소개"},
-        {id:2, title:"경력"},
-        {id:3, title:"지원동기"},
-        {id:4, title:"포부와각오"},
+        {id:1, title:"자기소개", link:"/choi/"},
+        {id:2, title:"지원동기", link:"/choi/"},
     ]
 };
 const About = [
-    {id:1, title:"자기소개"},
-    {id:2, title:"경력"},
-    {id:3, title:"지원동기"},
-    {id:4, title:"포부와각오"},
+    {id:1, title:"자기소개", link:"/choi/"},
+    {id:2, title:"지원동기", link:"/choi/"},
 ];
 const Skill = [
-    {id:1, title:"기본"},
-    {id:2, title:"디자인"},
-    {id:3, title:"코딩"},
+    {id:1, title:"기본", link:"/skills/"},
+    {id:2, title:"디자인", link:"/skills/"},
+    {id:3, title:"코딩", link:"/skills/"},
 ];
 const Study = [
-    {id:1, title:"영상들"},
-    {id:2, title:"이론들"},
+    {id:1, title:"영상들", link:"/study/"},
+    {id:2, title:"이론들", link:"/study/"},
 ];
 const Video = [
-    {id:1, title:"내가 본 유튜브"},
-    {id:2, title:"내가 본 강의들"},
-    {id:3, title:"내가 본 사이트들"},
+    {id:1, title:"내가 본 유튜브", link:"/study/practice/"},
+    {id:2, title:"내가 본 강의들", link:"/study/practice/"},
+    {id:3, title:"내가 본 사이트들", link:"/study/practice/"},
 ];
 const Theory = [
-    {id:1, title:"자바스크립트란?"},
-    {id:2, title:"ES6"},
-    {id:3, title:"const의 등장"},
-    {id:4, title:"var와 let의 차이"},
-    {id:5, title:"라이프사이클이란?"},
-    {id:6, title:"라이프사이클 함수"},
+    {id:1, title:"자바스크립트란?", link:"/study/theory/"},
+    {id:2, title:"ES6", link:"/study/theory/"},
+    {id:3, title:"const의 등장", link:"/study/theory/"},
+    {id:4, title:"var와 let의 차이", link:"/study/theory/"},
+    {id:5, title:"라이프사이클이란?", link:"/study/theory/"},
+    {id:6, title:"라이프사이클 함수", link:"/study/theory/"},
 ];
 const Card = [
-    {id:1, title: '0ssaem.com'},
-    {id:2, title: 'Tetris-Game'},
-    {id:3, title: 'introduce My Self'},             
-    {id:4, title: 'React CRUD post site'},             
-    {id:5,  title: 'Redux in React'}             
+    {id:1, title: '0ssaem.com', link:"/portfolio/"},
+    {id:2, title: 'Tetris-Game', link:"/portfolio/"},
+    {id:3, title: 'introduce My Self', link:"/portfolio/"},             
+    {id:4, title: 'React CRUD post site', link:"/portfolio/"},             
+    {id:5,  title: 'Redux in React', link:"/portfolio/"}             
 ];
 const blog = [
     {id:1, title: '2022.03.01 ~ 2022.03 27'},

@@ -75,7 +75,7 @@ const Header = () =>{
                     <li><NavLink to = "/study/practice"  onClick={()=>{
                             dispatch(CreateVideo());
                         }}>영상들</NavLink></li>
-                    <li><NavLink to = "/study/theory/WhatIsJavascript" onClick={()=>{
+                    <li><NavLink to = "/study/theory/1" onClick={()=>{
                             dispatch(CreateTheory());
                         }}>이론들</NavLink></li>
                 </ul>

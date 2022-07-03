@@ -11,12 +11,12 @@ const Theory = ()=>{
     return(
         <StyledDiv>
                 <Routes>
-                    <Route path="WhatIsJavascript" element={<What_is_Javascript/>}/>
-                    <Route path="es6" element={<Es6/>}/>
-                    <Route path="const" element={<Const/>}/>
-                    <Route path="variable" element={<Variable/>}/>
-                    <Route path="management" element={<Management/>}/>
-                    <Route path="component" element={<Componenet/>}/>
+                    <Route path="1" element={<What_is_Javascript/>}/>
+                    <Route path="2" element={<Es6/>}/>
+                    <Route path="3" element={<Const/>}/>
+                    <Route path="4" element={<Variable/>}/>
+                    <Route path="5" element={<Management/>}/>
+                    <Route path="6" element={<Componenet/>}/>
                 </Routes>
         </StyledDiv>
     )

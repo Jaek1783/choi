@@ -103,16 +103,6 @@
 .Certificates_item{
     width:600%;
 }
-button{
-    z-index: 1002;
-    position: absolute;
-    transform: translate(-50%);
-    background: transparent;
-    border:none;
-    width:40px;
-    top:40%;
-    cursor: pointer;
-}
 .next_btn{
     right:0;
 }

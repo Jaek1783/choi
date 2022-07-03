@@ -1,17 +1,18 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-// import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 const Article = () => {
     const data = useSelector((state) => state.Article.Article);
-    console.log(data);
     return (
         <StyledArticle>
             <ul>
-                {data.map(about=>{
+                {data.map(article=>{
                     return(
-                        <li key={about.id}>
-                            {about.title}
+                        <li key={article.id} >
+                            <NavLink to={article.link+article.id} onClick={()=>{
+                                console.log(article.id-1);
+                            }} >{article.title}</NavLink>
                         </li>
                     )
                 })}
