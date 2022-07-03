@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from "redux";
 import Header from "./Reducers/Header";
-const rootReducer = combineReducers({Header});
+import Article from "./Reducers/Article";
+const rootReducer = combineReducers({Header, Article});
 
 const store = createStore(rootReducer);
 

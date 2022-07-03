@@ -1,10 +1,11 @@
 import {NavLink, Link} from 'react-router-dom';
 import React,{useState, useEffect,useRef} from 'react';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import styles from './css/text.module.css';
 import styled from 'styled-components';
+import { CreateAbout } from './Reducers/Article';
+import { CreateSkills } from './Reducers/Article';
 const useScroll = ()=>{
-    
     const [state, setState] = useState({
       x:0,
       y:0
@@ -19,77 +20,109 @@ const useScroll = ()=>{
     return state;
   }
 const Header = () =>{
-    const data = useSelector((state) => state.Header.Nav);
-    console.log(data);
+
     const { y } = useScroll();
     const navRef = useRef(null);
     const subRef = useRef(null);
     const MouseOver = ()=>{
         subRef.current.style.display="block";
+        // console.log("들어왔어");
     }
     const MouseLeave = ()=>{
         subRef.current.style.display="none";
-    }
-    const addActive = ()=>{
-        navRef.current.classList.add('active');
-    }
-    const removeActive = ()=>{
-        navRef.current.classList.remove('active');
+        // console.log("나갔어");
     }
     useEffect(()=>{
         navRef.current.addEventListener('mouseover', MouseOver);
         subRef.current.addEventListener('mouseleave', MouseLeave);
     },[]);
+    const data = useSelector((state) => state.Header.Nav);
+    const dispatch = useDispatch();
     return(
-        <header className={y>39? 'black':'transparent'}>
-            <h1 className={styles.subText}><Link to ="/choi"
-                onClick={removeActive}
-            >Choi-portfolio</Link></h1>
-            <nav>
-                <ul className="nav">
-                    <li className={["nav_item ", styles.subText].join('')}>
-                        <NavLink to = "/choi"
-                            onClick={removeActive}
-                        >나에 대하여</NavLink>
+        <HeaderStyle className={y>39? 'black':'transparent'}>
+            <h1 className={styles.subText}><Link to ="/choi">Choi-portfolio</Link></h1>
+            <NavStyled>
+                <ul ref={navRef}>
+                    {/* {data.map(nav=>{
+                        return(
+                            <li key={nav.id}>
+                               <NavLink to = {nav.link}>{nav.title}</NavLink>
+                            </li>
+                        )
+                    })} */}
+                    <li className={styles.subText}>
+                        <NavLink to = "/choi" onClick={()=>{
+                            dispatch(CreateAbout());
+                        }}>나에 대하여</NavLink>
                     </li>
-                    <li className={["nav_item ", styles.subText].join('')}>
-                        <NavLink to = "/skills"
-                            onClick={removeActive}
-                        >나의 기술들</NavLink>
+                    <li className={styles.subText}>
+                        <NavLink to = "/skills" onClick={()=>{
+                            dispatch(CreateSkills());
+                        }}>나의 기술들</NavLink>
                     </li>
-                    <li className={["nav_item ", styles.subText].join('')} ref={navRef}>
-                        <NavLink to = "/study/:"
-                            onClick={(e)=>{
-                                e.preventDefault();
-                    }}
-                    >나의 공부들</NavLink></li>
-                    <li className={["nav_item ", styles.subText].join('')}>
-                        <NavLink to = "/portfolio"
-                            onClick={removeActive}
-                        >나의 코딩들</NavLink>
+                    <li className={styles.subText}>
+                        <NavLink to = "/study/:">나의 공부들</NavLink></li>
+                    <li className={styles.subText}>
+                        <NavLink to = "/portfolio">나의 코딩들</NavLink>
                     </li>
-                    <li className={["nav_item ", styles.subText].join('')}>
+                    <li className={styles.subText}>
                         <NavLink to = "/blog" >나의 행적들</NavLink>
                     </li>
                 </ul>
-            </nav>
-            <div className='subNav_container' ref={subRef}>
-                <StyledUl className={['subNav ', styles.subText].join('')} >
-                    <NavLink to = "/study/practice" className="nav_item"
-                        onClick={addActive}
-                    >수강강의들</NavLink>
-                    <NavLink to = "/study/theory/WhatIsJavascript" className="nav_item"
-                    onClick={addActive}
-                    >이론들</NavLink>
-                </StyledUl>
-            </div>
-      </header>
+            </NavStyled>
+            <SubNavStyled ref={subRef}>
+                <ul className={['subNav ', styles.subText].join('')} >
+                    <li><NavLink to = "/study/practice">수강강의들</NavLink></li>
+                    <li><NavLink to = "/study/theory/WhatIsJavascript">이론들</NavLink></li>
+                </ul>
+            </SubNavStyled>
+      </HeaderStyle>
     )
 };
 export default Header;
 
-const StyledUl = styled.ul`
-    display:flex;
-    padding-left:16.5rem;
-    margin-top:.5rem;
+const HeaderStyle = styled.header`
+width:100%;
+position:fixed;
+top:0;
+left:0;
+z-index: 1000;
+padding: 0.5rem;
+transition:.2s ease-in-out;
+    h1{
+        font-size:1.5rem;
+        float:left;
+        cursor: pointer;
+    }
 `;
+const NavStyled = styled.nav`
+    ul{
+        padding-top:.5rem;
+        display: flex;
+        padding-left:2rem;
+    }
+    li{
+        padding:.3rem;
+        text-align: center;
+        border-radius: 10px;
+        font-size:1rem;
+    }
+    a.active{
+        padding:.5rem;
+    }
+    li:not(:last-child){
+        margin-right:1rem;
+    }
+`;
+const SubNavStyled = styled.div`
+display:none;
+padding:.5rem 0;
+    ul{ 
+        display:flex;
+        padding-left:18rem;
+    }
+    li{
+        padding-left:2rem;
+    }
+`;
+

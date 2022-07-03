@@ -2,11 +2,11 @@
 
 const initState = {
     Nav : [
-        {id:1, title:"나에 대하여"},
-        {id:2, title:"나의 기술들"},
-        {id:3, title:"나의 공부들"},
-        {id:4, title:"나의 코딩들"},
-        {id:5, title:"나의 행적들"}
+        {id:1, title:"나에 대하여", link:"/choi"},
+        {id:2, title:"나의 기술들", link:"/skills"},
+        {id:3, title:"나의 공부들", link:"/study"},
+        {id:4, title:"나의 코딩들", link:"/portfolio"},
+        {id:5, title:"나의 행적들", link:"/blog"}
     ]
 };
 
