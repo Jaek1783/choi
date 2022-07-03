@@ -10,17 +10,6 @@ import Componenet from './Theory_item/Component';
 const Theory = ()=>{
     return(
         <StyledDiv>
-            <StyledArticle>
-                <ul>
-                    <li><Link to ="WhatIsJavascript">자바스크립트란?</Link></li>
-                    <li><Link to ="es6">ES5와 ES6버전의 차이</Link></li>
-                    <li><Link to ="const">const</Link></li>
-                    <li><Link to ="variable">var, let의 차이</Link></li>
-                    <li><Link to ="management">라이프사이클이란?</Link></li>
-                    <li><Link to ="component">라이프사이클 함수</Link></li>
-                </ul>
-            </StyledArticle>
-            <StyledRoutes>
                 <Routes>
                     <Route path="WhatIsJavascript" element={<What_is_Javascript/>}/>
                     <Route path="es6" element={<Es6/>}/>
@@ -29,32 +18,11 @@ const Theory = ()=>{
                     <Route path="management" element={<Management/>}/>
                     <Route path="component" element={<Componenet/>}/>
                 </Routes>
-            </StyledRoutes>      
         </StyledDiv>
     )
 }; export default Theory;
 
 const StyledDiv = styled.div`
-    display:flex;
-    margin-top:5rem;
-`;
-
-const StyledRoutes = styled.div`
     width:70%;
     margin:0 auto;
-`;
-const StyledArticle = styled.article`
-    margin: 0 2rem;
-    width:16.25rem;
-    height:700px;
-    border-left :1px solid #ccc;
-    border-right :1px solid #ccc;
-
-    li{
-        width:90%;
-        padding:.6rem 0;
-        margin:0 auto;
-        border-bottom:1px solid #ccc;
-        text-align:right;
-    }
 `;

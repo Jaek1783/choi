@@ -5,7 +5,7 @@ import pofol03 from '../img/portfolio/bootstrap.png';
 import pofol04 from '../img/portfolio/post.png';
 import pofol05 from '../img/portfolio/salad.png';
 import pofol06 from '../img/portfolio/redux.png';
-import React,{useState} from 'react';
+import React from 'react';
 import {useMediaQuery} from "react-responsive";
 import '../css/portfolio.css';
 function Portfolio(){

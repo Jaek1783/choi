@@ -10,7 +10,7 @@ const Article = () => {
             <ul>
                 {data.map(about=>{
                     return(
-                        <li key={about.title}>
+                        <li key={about.id}>
                             {about.title}
                         </li>
                     )
