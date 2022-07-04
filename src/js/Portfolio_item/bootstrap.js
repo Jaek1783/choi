@@ -1,31 +1,30 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
-const Tetris = ()=>{
+const Bootstrap = ()=>{
     const data = useSelector((state) => state.Pofol.Card);
     return(
         <ContainerStyled>
             <CardStyled>
-                <dt>{data[1].title}</dt>
+                <dt>{data[2].title}</dt>
                 <dd>
-                    {data[1].main}
+                    {data[2].main}
                 </dd>
             </CardStyled>
             <TextStyled>
             <ul>
-                <li>2022년 3월, 처음 유튜브를 보고 만든 테트리스게임</li>
-                <li>ul,li태그로 만든 테트리스게임</li>
+                <li>부트스트랩으로 만든 간단한 페이지</li>
                 <li>
                     <p>제작기간</p>
-                    <p>2022.03.15 ~ 2022.03.18</p>
+                    <p>2022.03.25 ~ 2022.03.28</p>
                 </li>
-                <li>첫 클론코딩 사이트 유튜브 보며 따라하는데 눈빠지는 줄 알았다.</li>
-                <li><BtnStyle onClick={()=>window.open(data[1].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
+                <li></li>
+                <li><BtnStyle onClick={()=>window.open(data[2].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
             </ul>
             </TextStyled>          
         </ContainerStyled>
     )
-};export default Tetris;
+};export default Bootstrap;
 const ContainerStyled = styled.div`
     width:70%;
     padding-top:3rem;

@@ -3,6 +3,7 @@ import Green01 from '../../../img/study/academy/green_Certificates01.png';
 import Green02 from '../../../img/study/academy/green_Certificates02.png';
 import Green03 from '../../../img/study/academy/green_Certificates03.png';
 import Green04 from '../../../img/study/academy/green_Certificates04.png';
+import styled from "styled-components";
 const Green = ()=>{
     const Green_items = [
         {Green_item:Green04, alt:'그린00'},
@@ -16,11 +17,18 @@ const Green = ()=>{
         <>
         {Green_items.map(green_item=>{
             return(
-                <div key={green_item.alt} className="green_item _item">
+                <GreenStyled key={green_item.alt} className="_item">
                     <img src={green_item.Green_item} alt={green_item.alt+'수료증'} />
-                </div>
+                </GreenStyled>
             )
         })}
         </>
     )
 }; export default Green;
+
+const GreenStyled = styled.div`
+    width:20rem;
+    padding:1rem;
+    margin:0 auto;
+    transform:translateX(-623.25px);
+`;

@@ -19,17 +19,17 @@ const initState = {
         id:2
        },
        {main: <img src={pofol03} alt="포트폴리오 사진03"/>,
-       title: '[Bootstrap coding site] introduce My Self',
+       title: '[Bootstrap coding site]\nIntroduce My Self',
        adress: 'https://jaek1783.github.io/Bootstrap',
        id:3
       },             
        {main: <img src={pofol04} alt="포트폴리오 사진04"/>,
-       title: '[React CRUD post site] 프론트엔드 게시판',
+       title: '[React CRUD post site]\n프론트엔드 게시판',
        adress: 'https://jaek1783.github.io/post',
        id:4
       },             
        {main: <img src={pofol05} alt="포트폴리오 사진05"/>,
-       title: '[React pull site]',
+       title: '[All Web site]\n최종 프로젝트',
        adress: 'https://jaek1783.github.io/salad',
        id:5
       },             

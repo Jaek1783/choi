@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
-function Cafe(){
+const Cafe= ()=>{
     const data = useSelector((state) => state.Pofol.Card);
     return(
         <ContainerStyled>
@@ -25,7 +25,7 @@ function Cafe(){
             </TextStyled>          
         </ContainerStyled>
     )
-}export default Cafe;
+};export default Cafe;
 const ContainerStyled = styled.div`
     width:70%;
     padding-top:3rem;

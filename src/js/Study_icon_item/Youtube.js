@@ -1,6 +1,7 @@
 import React from "react";
 import '../../css/study.css';
 import {useMediaQuery} from "react-responsive";
+import styled from "styled-components";
 
 import Youtube_table01 from "./Youtube_icon_item/Youtube_table01";
 import Youtube_table02 from "./Youtube_icon_item/Youtube_table02";

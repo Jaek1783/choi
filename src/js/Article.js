@@ -1,17 +1,29 @@
-import React from 'react';
+import React,{useEffect, useRef} from 'react';
 import { useSelector } from "react-redux";
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 const Article = () => {
     const data = useSelector((state) => state.Article.Article);
+    const numRef = useRef(null);
+    useEffect(()=> {
+        setTimeout(()=>{
+            numRef.current.firstChild.firstChild.classList.add('active');
+        },100);
+        return () => {
+            clearTimeout();
+        }
+    },[data]);
+    const removeActive = ()=>{
+        numRef.current.firstChild.firstChild.classList.remove('active');
+    }
     return (
         <StyledArticle>
-            <ul>
+            <ul ref={numRef}>
                 {data.map(article=>{
                     return(
                         <li key={article.id} >
                             <NavLink to={article.link+article.id} onClick={()=>{
-                                console.log(article.id-1);
+                                removeActive();
                             }} >{article.title}</NavLink>
                         </li>
                     )

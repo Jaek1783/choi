@@ -6,7 +6,6 @@ const initState = {
         {id:2, title:"나의 기술들", link:"/skills"},
         {id:3, title:"나의 공부들", link:"/study"},
         {id:4, title:"나의 코딩들", link:"/portfolio"},
-        {id:5, title:"나의 행적들", link:"/blog"}
     ]
 };
 

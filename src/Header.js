@@ -3,7 +3,7 @@ import React,{useState, useEffect,useRef} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import styles from './css/text.module.css';
 import styled from 'styled-components';
-import { CreateAbout,CreateSkills, CreateStudy, CreateTheory, CreateVideo, CreateCard,CreateBlog } from './Reducers/Article';
+import { CreateAbout,CreateSkills, CreateTheory, CreateVideo, CreateCard,CreateBlog } from './Reducers/Article';
 const useScroll = ()=>{
     const [state, setState] = useState({
       x:0,
@@ -37,6 +37,18 @@ const Header = () =>{
     },[]);
     const data = useSelector((state) => state.Header.Nav);
     const dispatch = useDispatch();
+    const numRef = useRef(null);
+    useEffect(()=> {
+        setTimeout(()=>{
+            numRef.current.classList.add('active');
+        },100);
+        return () => {
+            clearTimeout();
+        }
+    },[data]);
+    const removeActive = ()=>{
+        numRef.current.classList.remove('active');
+    }
     return(
         <HeaderStyle className={y>39? 'black':'transparent'}>
             <h1 className={styles.subText}><Link to ="/choi" onClick={()=>{
@@ -56,27 +68,23 @@ const Header = () =>{
                     </li>
                     <li className={styles.subText}>
                         <NavLink to = "/study" onClick={()=>{
-                            dispatch(CreateStudy());
+                            dispatch(CreateVideo());
                         }}  ref={navRef}>나의 공부들</NavLink></li>
                     <li className={styles.subText}>
                         <NavLink to = "/portfolio" onClick={()=>{
                             dispatch(CreateCard());
                         }} >나의 코딩들</NavLink>
                     </li>
-                    <li className={styles.subText}>
-                        <NavLink to = "/blog"  onClick={()=>{
-                            dispatch(CreateBlog());
-                        }}>나의 행적들</NavLink>
-                    </li>
                 </ul>
             </NavStyled>
             <SubNavStyled ref={subRef}>
                 <ul className={['subNav ', styles.subText].join('')} >
-                    <li><NavLink to = "/study/practice"  onClick={()=>{
+                    <li><NavLink to = "/study/practice/1"  onClick={()=>{
                             dispatch(CreateVideo());
-                        }}>영상들</NavLink></li>
+                        }} ref={numRef}>영상들</NavLink></li>
                     <li><NavLink to = "/study/theory/1" onClick={()=>{
                             dispatch(CreateTheory());
+                            removeActive();
                         }}>이론들</NavLink></li>
                 </ul>
             </SubNavStyled>
