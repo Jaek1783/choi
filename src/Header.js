@@ -3,7 +3,7 @@ import React,{useState, useEffect,useRef} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import styles from './css/text.module.css';
 import styled from 'styled-components';
-import { CreateAbout,CreateSkills, CreateTheory, CreateVideo, CreateCard,CreateBlog } from './Reducers/Article';
+import { CreateAbout,CreateSkills, CreateTheory, CreateVideo, CreateCard } from './Reducers/Article';
 const useScroll = ()=>{
     const [state, setState] = useState({
       x:0,
@@ -127,14 +127,12 @@ const NavStyled = styled.nav`
 `;
 const SubNavStyled = styled.div`
 display:none;
-padding:.5rem 0;
     ul{ 
-        display:flex;
-        padding-left:18rem;
+        padding-left:20rem;
         margin-top:.2rem;
     }
     li{
-        padding-left:2rem;
+        padding-top:1rem;
     }
 `;
 

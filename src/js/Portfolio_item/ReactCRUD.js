@@ -56,7 +56,7 @@ const CardStyled = styled.dl`
 const TextStyled = styled.div`
 position:relative;
 border:1px solid #ccc;
-height:300px;
+height:350px;
 border-radius:15px;
 padding:3rem;
     li{

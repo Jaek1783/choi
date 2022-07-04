@@ -73,41 +73,11 @@
     box-sizing: border-box;
 }
 
-.academy_modal{
-    height:80vh;
-    position:fixed;
-    top:5rem;
-    left:50%;
-    transform: translate(-50%);
-    z-index: 100;
-    display:none;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 15px;
-    padding:1rem;
-    box-sizing: border-box;
-}
-.academy_pc_modal{
-    width:45rem;
-}
-.academy_mobile_modal{
-    width:90%;
-}
-.Certificates{
-    /* width:42rem; */
-    width:90%;
-    color:#fff;
-    position:relative;
-    overflow: hidden;
-    margin:0 auto ;
-}
-.Certificates_item{
-    width:600%;
-}
 .next_btn{
-    right:0;
+    right:25%;
 }
 .prev_btn{
-    left:5%;
+    left:25%;
 }
 .transition{
     transition: .3s ease-in-out;
@@ -116,46 +86,6 @@
 .inf_item{
     width:40rem;
     padding:1rem;
-}
-.close{
-    width:30px;
-    height:30px;
-    position:absolute;
-    top:10px;
-    right:10px;
-    z-index: 101;
-}
-/* youtube Item Style */
-.youtube_item{
-    width:4rem;
-    border-radius:100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: #fff;
-}
-.youtube_item>img{
-    padding-top:.2rem;
-}
-.youtubeName{
-    margin-top:1rem;
-    text-align: center;
-}
-.youtube_block{
-    display:block;
-}
-.youtube_flex{
-    justify-content: space-evenly;
-}
-.youtube_container_pc>li{
-    padding:2rem;
-}
-.youtube_container_tablet{
-    justify-content: space-evenly;
-    margin:0 2rem;
-}
-.youtube_container_mobile{
-    flex-direction: column;
-    align-items: center;
 }
 /* Website Item style */
 

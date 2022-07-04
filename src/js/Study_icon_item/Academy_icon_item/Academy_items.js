@@ -1,32 +1,39 @@
-import React, {useState, useRef, useEffect } from "react";
-import close from '../../../img/icon/cancel.png';
-import Academy_icon_item from "./Academy_icon_item";
-import {useMediaQuery} from "react-responsive";
-const Academy_items = (props)=>{
-    const isPc = useMediaQuery({
-        query:"(min-width:810px)"
-        });
-    return(
-    <>
-    {props.items.map(item=>{
-        return(
-            <li key={item.name} className="content_item academy_item">
-                <img src={item.img} alt={item.name+"이미지"}
-             onClick={()=>{
-                const modal = document.querySelectorAll('.academy_modal');
-                modal[item.id-1].style.display= 'block';
-            }}/>
-                <>
-                    <div className={isPc? "academy_modal academy_pc_modal":"academy_modal academy_mobile_modal"}>
-                        <Academy_icon_item item={item} className="academy_item"/>
-                        <img src={close} alt="닫기 이미지" className="close" onClick={()=>{
-                            const modal = document.querySelectorAll('.academy_modal');
-                            modal[item.id-1].style.display= 'none';
-                        }}/>
-                    </div>
-                </>
-            </li>
-        )   
-    })}
-    </>
-)}; export default Academy_items;
+import React from "react";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
+const Academy_items = (props) => {
+    const data = useSelector((state)=>state.Academy.items);
+    return (
+        <Container>
+            <ul ref={props.slideRef}>
+                {data.map(list=>{
+                    return(
+                        <li key={list.id}>
+                            <img src={list.item} alt={list.alt+'이미지'} />
+                        </li>
+                    )
+                })}
+            </ul>
+        </Container>
+    );
+};
+
+export default Academy_items;
+
+const Container = styled.div`
+background-color:#131361;
+border-radius:15px;
+width:340px;
+overflow:hidden;
+padding:1rem 0;
+margin:0 auto;
+margin-top:3rem;
+    ul{
+        width:600%;
+        display:flex;
+    }
+    li{
+        width:300px;
+        padding:0 20px;
+    }
+`;

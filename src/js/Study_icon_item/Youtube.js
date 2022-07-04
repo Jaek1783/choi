@@ -1,32 +1,53 @@
 import React from "react";
 import '../../css/study.css';
-import {useMediaQuery} from "react-responsive";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-
-import Youtube_table01 from "./Youtube_icon_item/Youtube_table01";
-import Youtube_table02 from "./Youtube_icon_item/Youtube_table02";
 const Youtube = ()=>{
-    const youtube_items = [
-        {name:'table01', content:<Youtube_table01/>},
-        {name:'table02', content:<Youtube_table02/>}
-    ];
-    const isPc = useMediaQuery({
-        query:"(min-width:1740px)"
-        });
-    const isMobile = useMediaQuery({
-        query:"(max-width:879px)"
-        });
-    const tablet_mobile = isMobile? "youtube_flex flex":'youtube_block';
-    
+    const data = useSelector((state)=>state.Youtube.Items)
 return(
-    <div className={isPc? "flex":tablet_mobile}>
-        {youtube_items.map(item=>{
+    <Container>
+        {data.map(youtube_item=>{
             return(
-                <div key={item.name}>
-                {item.content}
-                </div>
+                <ItemStyled key={youtube_item.name}>
+                    <dl>
+                        <dt> <img src={youtube_item.icon} alt={youtube_item.name+'아이콘'} onClick={()=>{
+                        window.open(youtube_item.adress,'_blank');}}/></dt>
+                        <dd>{youtube_item.name}</dd>
+                    </dl>
+                </ItemStyled>
             )
         })}
-    </div>
+    </Container>
 )
 }; export default Youtube;
+
+const Container = styled.ul`
+width:50%;
+margin:0 auto;
+display:flex;
+justify-content:center;
+// flex-direction:column;
+flex-wrap: wrap;
+`;
+const ItemStyled = styled.li`
+    padding-right:1rem;
+    dl{
+        width:10rem;
+        text-align:center;
+        margin-bottom:3rem;
+    }
+    img{
+        width:100px;
+        cursor:pointer;
+    }
+    dt{
+        border:1px solid #ccc;
+        border-radius:15px 15px 0 0;
+        padding:1rem 0;
+    }
+    dd{ padding: 1rem 0 2rem;
+        background-color:#131361;
+        color:#fff;
+        border-radius:0 0 15px 15px;
+    }
+`;
