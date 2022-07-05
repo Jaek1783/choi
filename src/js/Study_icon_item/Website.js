@@ -1,26 +1,30 @@
 import React from "react";
 import '../../css/study.css';
-import {useMediaQuery} from "react-responsive";
+import styled from "styled-components";
 import Website_icon_item from "./Website_icon_item/Website_icon_item";
+import coding from "./../../img/study/website/coding.png";
+import poiema from "./../../img/study/website/poiema.png";
+import mdn from "./../../img/study/website/mdn.png";
+import w3s from "./../../img/study/website/w3s.png";
 
 const Website = ()=>{
     const contents = [
-        {name:'코딩팩토리', adress:'https://www.codingfactory.net/'},
-        {name:'포이마웹', adress:'https://poiemaweb.com/'},
-        {name:'엠디엔', adress:'https://developer.mozilla.org/ko/'},
-        {name:'W3S', adress:'https://www.w3schools.com/'},
-        {name:'노마드코더', adress:'https://nomadcoders.co/'},
+        {name:'코딩팩토리', img:coding, adress:'https://www.codingfactory.net/'},
+        {name:'포이마웹', img:poiema, adress:'https://poiemaweb.com/'},
+        {name:'MDN', img:mdn, adress:'https://developer.mozilla.org/ko/'},
+        {name:'W3S', img:w3s, adress:'https://www.w3schools.com/'},
     ];
-    const isPc = useMediaQuery({
-        query:"(min-width:1740px)"
-        });
-        const isTablet = useMediaQuery({
-            query:"(min-width:880px)"
-            });
-        const checkTablet = isTablet? 'adress_container_tablet flex':'adress_container_mobile';      
     return(
-    <ul className={isPc? "adress_container_pc flex":checkTablet}>
+    <Container>
         <Website_icon_item contents={contents}/>
-    </ul>
+    </Container>
     )
 }; export default Website;
+
+const Container = styled.ul`
+width:70%;
+margin:0 auto;
+display:flex;
+justify-content: center;
+flex-wrap: wrap;
+`;

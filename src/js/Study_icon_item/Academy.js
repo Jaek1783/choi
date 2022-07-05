@@ -96,6 +96,7 @@ return(
 
 const Container = styled.div`
 position:relative;
+margin:0 auto;
 `;
 const ModalItems = styled.ul`
 width:70%;
