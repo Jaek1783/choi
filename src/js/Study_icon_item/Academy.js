@@ -2,7 +2,7 @@ import React , {useState, useRef, useEffect} from "react";
 import '../../css/study.css';
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { CreateGreen, CreateInflearn } from "../../Reducers/Academy";
+import { CreateGreen, CreateInflearn, CreateSparta } from "../../Reducers/Academy";
 import academy01 from './../../img/study/academy/green.jpg';
 import academy02 from './../../img/study/academy/inflearn.png';
 import academy03 from './../../img/study/academy/sparta.png';
@@ -12,11 +12,17 @@ import prev from './../../img/icon/prev.png';
 import Academy_items from "./Academy_icon_item/Academy_items";
 
 const Academy = ()=>{
+    const items = [
+        {id:0, title:academy01, alt : "그린컴퓨터",dispatch:CreateGreen()},
+        {id:1, title:academy02, alt : "인프런",dispatch:CreateInflearn()},
+        {id:2, title:academy03, alt : "스파르타코딩클럽",dispatch:CreateSparta()},
+    ];
     const dispatch = useDispatch();
     const [num, setNum] = useState(0);
     const numRef = useRef(0);
     const slideRef = useRef(null);
     const containerRef = useRef(null);
+    const itemsRef = useRef(null);
     const slideCount = 4;
     const nextBtnClick = ()=>{
             if(numRef.current < slideCount){
@@ -48,24 +54,32 @@ const Academy = ()=>{
         }              
     useEffect(()=>{
        setTimeout(()=>{
-        console.log(containerRef.current.childNodes);
-        // const containerLangth = containerRef.current.childElementCount;
-        // for(let i= 0; i<containerLangth; i++){
-        //     console.log(i);
-        // }
+        console.log(containerRef);
         containerRef.current.childNodes[0].classList.add('active');
        },100); 
-    },[]);            
+    },[containerRef]);
 return(
     <Container>
         <ModalItems ref={containerRef}>
-            <li onClick={()=>{
-                dispatch(CreateGreen());
-            }}><img src={academy01} alt="그린아카데미"/></li>
-            <li onClick={()=>{
-                dispatch(CreateInflearn());
-            }}><img src={academy02} alt="인프런"/></li>
-            <li><img src={academy03} alt="스파르타코딩클럽"/></li>
+            {items.map(list=>{
+                return(
+                    <li key={list.id} ref={itemsRef} onClick={()=>{
+                        dispatch(list.dispatch);
+                        const containerLangth = containerRef.current.childElementCount;
+                        for(let i= 0; i<containerLangth; i++){
+                            if(i === list.id){
+                                containerRef.current.childNodes[i].classList.add('active');
+                            }
+                            else{
+                                containerRef.current.childNodes[i].classList.remove('active');
+                            }
+                            
+                        } 
+                    }}>
+                        <img src={list.title} alt={list.alt} />
+                    </li>
+                )
+            })}
         </ModalItems>
         <Academy_items slideRef={slideRef}/>
         <BtnStyled className="prev_btn"><img src={prev} alt="이전" onClick={()=>{

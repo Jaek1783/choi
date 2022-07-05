@@ -9,7 +9,7 @@ const Academy_items = (props) => {
                 {data.map(list=>{
                     return(
                         <li key={list.id}>
-                            <img src={list.item} alt={list.alt+'이미지'} />
+                            <p>{list.item}</p>
                         </li>
                     )
                 })}
@@ -35,5 +35,6 @@ margin-top:3rem;
     li{
         width:300px;
         padding:0 20px;
+        color:#fff;
     }
 `;
