@@ -16,14 +16,14 @@ const Icon_item02 = ()=>{
         });
     return (
         <SkillContainer>
-            <div className={isPc? "skill_container_pc" : 'skill_container_mobile'}>
+            <div className="skill_icon">
                 {design_items.map(design_item=>{
                     return(
                         <SkillStyled key={design_item.id}>
-                            <dt className="design_item icon_container">
-                                <p className="icon"><img src={design_item.img} alt={design_item.alt} /></p>
+                            <dt>
+                                <p><img src={design_item.img} alt={design_item.alt} /></p>
                             </dt>
-                            <dd className={["skill_name ", styles.text].join('')}>
+                            <dd className={styles.text}>
                                 <p>{design_item.name}</p>
                             </dd>
                         </SkillStyled>
@@ -45,6 +45,9 @@ flex-direction: column;
 p.text{
     padding:1rem;
 }
+.skill_icon{
+    display:flex;
+}
 `;
 
 const SkillStyled = styled.dl`
@@ -60,7 +63,12 @@ animation-duration: 1s;
 animation-name: rotateY;
 animation-direction: alternate;
 box-shadow: 5px 11px 30px rgba(0,0,0,0.3);
+color:#fff;
+font-size:20px;
 :hover{
     background-color: #2e2e8d;
+}
+dt{
+    width:5rem;
 }
 `;

@@ -24,16 +24,21 @@ const Header = () =>{
     const navRef = useRef(null);
     const subRef = useRef(null);
     const MouseOver = ()=>{
+        navRef.current.classList.add('black');
+        navRef.current.classList.remove('transparent');
         subRef.current.style.display="block";
         // console.log("들어왔어");
     }
     const MouseLeave = ()=>{
         subRef.current.style.display="none";
+        // navRef.current.classList.remove('black');
+        navRef.current.classList.add('transparent');
+
         // console.log("나갔어");
     }
     useEffect(()=>{
         navRef.current.addEventListener('mouseover', MouseOver);
-        subRef.current.addEventListener('mouseleave', MouseLeave);
+        navRef.current.addEventListener('mouseleave', MouseLeave);
     },[]);
     const data = useSelector((state) => state.Header.Nav);
     const dispatch = useDispatch();
@@ -50,7 +55,7 @@ const Header = () =>{
         numRef.current.classList.remove('active');
     }
     return(
-        <HeaderStyle className={y>39? 'black':'transparent'}>
+        <HeaderStyle className={y>39? 'black':'transparent'} ref={navRef}>
             <h1 className={styles.subText}><Link to ="/choi" onClick={()=>{
                             dispatch(CreateAbout());
                         }}>Choi-portfolio</Link></h1>
@@ -69,7 +74,7 @@ const Header = () =>{
                     <li className={styles.subText}>
                         <NavLink to = "/study" onClick={()=>{
                             dispatch(CreateVideo());
-                        }}  ref={navRef}>나의 공부들</NavLink></li>
+                        }}>나의 공부들</NavLink></li>
                     <li className={styles.subText}>
                         <NavLink to = "/portfolio" onClick={()=>{
                             dispatch(CreateCard());
@@ -78,7 +83,7 @@ const Header = () =>{
                 </ul>
             </NavStyled>
             <SubNavStyled ref={subRef}>
-                <ul className={['subNav ', styles.subText].join('')} >
+                <ul>
                     <li><NavLink to = "/study/practice/1"  onClick={()=>{
                             dispatch(CreateVideo());
                         }} ref={numRef}>영상들</NavLink></li>
@@ -128,7 +133,7 @@ const NavStyled = styled.nav`
 const SubNavStyled = styled.div`
 display:none;
     ul{ 
-        padding-left:20rem;
+        padding-left:25rem;
         margin-top:.2rem;
     }
     li{

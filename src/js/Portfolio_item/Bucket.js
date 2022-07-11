@@ -6,20 +6,34 @@ const Salad = ()=>{
     return(
         <ContainerStyled>
             <CardStyled>
-                <dt>{data[4].title}</dt>
+                <dt>{data[6].title}</dt>
                 <dd>
-                    {data[4].main}
+                    {data[6].main}
                 </dd>
             </CardStyled>
             <TextStyled>
             <ul>
+            <li>스파르타코딩클럽 리액트기초반을 수강하며, 만든 버킷리스트 프로젝트</li>
+                <li>
+                    <p>학습기간</p>
+                    <p>2022.06.10 ~ 2022.07.10</p>
+                </li>
                 <li>
                     <p>제작기간</p>
-                    <p>2022.06.22 ~ 2022.06.23</p>
+                    <p>최종 배포까지 작업소요시간 4일</p>
                 </li>
-                <li>샐러드판매 사이트의 회사소개사이트를 벤치마킹하여 디자인한 웹사이트</li>
-                <li>업데이트 진행중</li>
-                <li><BtnStyle onClick={()=>window.open(data[4].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
+                <li>
+                    <p>사용스킬</p>
+                    <p>리액트, 리덕스, 스타일드컴포넌트, 파이어베이스, 아마존 S3, Route53</p>
+                </li>
+                <li>
+                    <BtnStyle onClick={()=>window.open('https://blog.naver.com/jaek1783/222807083800','_blank')}>
+                        해설보러가기
+                    </BtnStyle>
+                    <BtnStyle onClick={()=>window.open(data[6].adress,'_blank')}>
+                        사이트 구경가기
+                    </BtnStyle>
+                </li>
             </ul>
             </TextStyled>          
         </ContainerStyled>
@@ -70,4 +84,5 @@ height:50px;
 background-color:#131361;
 color:#fff;
 border-radius:15px;
+margin-right:1rem;
 `;

@@ -5,6 +5,8 @@ import pofol03 from '../img/portfolio/bootstrap.png';
 import pofol04 from '../img/portfolio/post.png';
 import pofol05 from '../img/portfolio/salad.png';
 import pofol06 from '../img/portfolio/redux.png';
+import pofol07 from '../img/portfolio/bucket.png';
+import pofol08 from '../img/portfolio/quiz.png';
 
 const initState = {
      Card: [
@@ -29,7 +31,7 @@ const initState = {
        id:4
       },             
        {main: <img src={pofol05} alt="포트폴리오 사진05"/>,
-       title: '[All Web site]\n최종 프로젝트',
+       title: '[샐러드 사이트 벤치마킹]\n리뉴얼 사이트',
        adress: 'https://jaek1783.github.io/salad',
        id:5
       },             
@@ -37,7 +39,17 @@ const initState = {
        title: '[Redux in React]',
        adress: 'https://jaek1783.github.io/reduxStudy',
        id:6
-      }             
+      },             
+       {main: <img src={pofol07} alt="포트폴리오 사진07"/>,
+       title: '[프로젝트01]\n나의버킷리스트',
+       adress: 'http://buketlist.me.s3-website.ap-northeast-2.amazonaws.com/',
+       id:7
+      },             
+       {main: <img src={pofol08} alt="포트폴리오 사진08"/>,
+       title: '[프로젝트02]\n나를아시나요?',
+       adress: 'http://youknowme.tk.s3-website.ap-northeast-2.amazonaws.com/who',
+       id:8
+      },             
     ]
 }
 

@@ -5,6 +5,7 @@ import Green03 from '../img/study/academy/green_Certificates03.png';
 import Green04 from '../img/study/academy/green_Certificates04.png';
 import Inflearn01 from '../img/study/academy/inflearn_Certificates01.png';
 import Inflearn02 from '../img/study/academy/inflearn_Certificates02.png';
+import Sparta from '../img/study/academy/sparta_Certificates01.jpeg';
 
 const initState = {
     items:[
@@ -33,7 +34,10 @@ const inf = [
 ];
 
 const sparta = [
-    {id:1, item:"아직 완료한 강의가 없습니다."},
+    {id:1, item:<img src={Sparta} alt="스파르타코딩클럽01"/>},
+    {id:2, item:<img src={Sparta} alt="스파르타코딩클럽01"/>},
+    {id:3, item:<img src={Sparta} alt="스파르타코딩클럽01"/>},
+    {id:4, item:<img src={Sparta} alt="스파르타코딩클럽01"/>},
 ];
 //Action
 const GREEN = "academy/GREEN";
