@@ -5,14 +5,18 @@ const AboutT = ()=>{
             <StyledWrap id="about" className="wrap">
                 <h2 className={styles.subText}>지원동기</h2>
                 <dl>
-                    <dt>Q. 개발직군에 지원한 동기는?</dt>
-                    <dd>2018년 우연한 계기로 국비지원 퍼블리셔 실무자 과정을 배우게 되었습니다.</dd>
-                    <dd>코딩은 저에게 새로운 세계를 보여주었습니다.</dd>
-                    <dd>재미있었고, 흥미로웠고, 계속해서 공부하고 싶은 마음이 생겼습니다.</dd>
-                    <dd>중간에 다른 일들을 해보았지만, 마음은 개발자로 향하고 있었습니다.</dd>
-                    <dd>지금은 개발자로 성공하고 싶어 꾸준히 공부하며 역량을 향상시키고 있습니다.</dd>
-                    <dd>꼭 당사에서 성공한 개발자가 되고 싶습니다.</dd>
-                    <dd> 감사합니다.</dd>
+                    <dt>Q. 개발직군에 지원한 동기는 무엇인가요?</dt>
+                    <dd><span>열심히</span> 살았습니다.</dd>
+                    <dd><span>재밌게</span> 살았습니다.</dd>
+                    <dd>이제는 <span>결과를 남기며</span> 살고 싶습니다.</dd>
+                    <dd>이제는 <span>개발자로</span> 성공하고 싶습니다.</dd>
+                    <dd>신입이지만, 신입이기에</dd>
+                    <dd>배움의 열정과 바짝든 군기,</dd>
+                    <dd>성실함이 준비되어 있습니다.</dd>
+                    <dd>회사의 성장과 함께 <span>성장</span>하는</dd>
+                    <dd>회사의 성공과 함께 <span>성공하</span>는</dd>
+                    <dd>개발자가 되<span>고싶습니다.</span></dd>
+                    <dd>감사합니다.</dd>
                 </dl>
             </StyledWrap>           
     )
@@ -21,8 +25,8 @@ const AboutT = ()=>{
 export default AboutT;
 
 const StyledWrap = styled.div`
-width:40%;
-border:1px solid #ccc;
+width:90%;
+border:5px solid #131361;
 margin:5rem auto;
 border-radius: 15px;
 box-sizing: border-box;
@@ -38,5 +42,9 @@ text-align:center;
     }
     dd{
         padding:.5rem;
+        span{
+            font-weight:bold;
+            font-size:1.5rem;
+        }
     }
 `;

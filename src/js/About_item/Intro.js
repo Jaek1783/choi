@@ -11,12 +11,13 @@ const AboutT = ()=>{
                             <p className={styles.subText}>About Me</p>
                             <p className={styles.textKr}> 안녕하세요<br/>신입 개발자 최재근입니다.</p>
                             <p className={styles.textKr}> 제 닉네임은 지렁이형입니다.</p>
-                            <p className={styles.textKr}> 다른 사람의 시선보다<br/>꿈을 향해 나아가는<br/>개발자로 성장하고 싶어<br/>지렁이형이라고 지었습니다.</p>
                         </dt>
                         <dd>
-                            <p className={styles.textKr}> 다른 사람의 시선보다<br/>꿈을 향해 나아가는<br/>성공한 개발자로</p>
-                            <p className={styles.textKr}> 성장 시켜주실 회사를 찾고 있습니다.</p>
-                            <p className={styles.textKr}> 감사합니다.</p>
+                        <p className={styles.textKr}>다른 사람의 시선보다</p>
+                        <p className={styles.textKr}>꿈을 향해 꿈틀대는 개발자로</p>
+                        <p className={styles.textKr}>성장하고 싶어</p>
+                        <p className={styles.textKr}> 지렁이형이라고 지었습니다.</p>
+                            <p className={styles.textKr}>잘 부탁 드립니다.</p>
                         </dd>
                     </dl>
             </StyledWrap>           
@@ -26,18 +27,15 @@ const AboutT = ()=>{
 export default AboutT;
 
 const StyledWrap = styled.div`
-width:50%;
 margin:5rem auto;
 display:flex;
-border-radius: 15px;
+justify-content:space-evenly;
 box-sizing: border-box;
 text-align:center;
     div{
         width:200px;
-        padding-right:5rem;
     }
     dl{ width:300px;
-        height:348px;
         color:#fff;
         border:1px solid #ccc;
         border-radius:15px;
@@ -45,7 +43,7 @@ text-align:center;
     dt{
         color:#000;
         background-color:#fff;
-        padding-bottom:2rem;
+        padding:2rem 0 ;
         border-radius:15px 15px 0 0;
     }
     dd{

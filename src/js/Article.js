@@ -38,7 +38,7 @@ export default Article;
 const StyledArticle = styled.article`
     margin: 0 2rem;
     width:200px;
-    height:700px;
+    height:90vh;
     border-left :1px solid #ccc;
     border-right :1px solid #ccc;
 

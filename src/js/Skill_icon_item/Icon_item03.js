@@ -16,27 +16,27 @@ const Icon_item03 = ()=>{
         {id:3, img:github, alt:'깃허브', name:'Github'},
         {id:4, img:react_icon, alt:'리액트', name:'React'},
         {id:5, img:redux, alt:'리덕스', name:'Redux'},
-        {id:6, img:aws, alt:'aws', name:'Amazone S3'},
-        {id:7, img:styledComponent, alt:'스타일드컴포넌트', name:'Styled-Component'},
+        {id:6, img:styledComponent, alt:'스타일드컴포넌트', name:'Styled-Component'},
+        {id:7, img:aws, alt:'aws', name:'Amazone S3'},
         {id:8, img:firebase, alt:'파이어베이스', name:'Firebase'},
     ];
     return (
-        <SkillContainer>  
-            <div className="skill_icon">
+        <div className="skillContainer">  
+            <div className="skillIcon">
                 {coding_items.map(coding_item=>{
                     return(
-                        <SkillStyled key={coding_item.id}>
+                        <dl className="skillItem" key={coding_item.id}>
                             <dt>
                                 <p><img src={coding_item.img} alt={coding_item.alt} /></p>
                             </dt>
                             <dd className={styles.text}>
                                 <p>{coding_item.name}</p>
                             </dd>
-                        </SkillStyled>
+                        </dl>
                     )
                 })}
             </div>
-            <div>
+            {/* <div>
             <p className="text">VsCode를 이용하여, 코딩작업합니다.</p>
             <p className="text">부트스트랩을 이용하여, 가벼운 디자인코딩 가능합니다.</p>
             <p className="text">Github를 이용하여 코드관리 중이며, Git과 Branch를 이용하여, 협업 가능합니다.</p>
@@ -45,42 +45,7 @@ const Icon_item03 = ()=>{
             <p className="text">React-Router-Dom의 Routes, Route,  NavLink, Link, Navigate를 이용하여 SPA(Single Page Applcation)을 제작합니다. </p>
             <p className="text">Styled-Components를 이용하여, 좀 더 빠르고 깔끔하며, 복잡한 클래스네이밍에서 벗어납니다.</p>
             <p className="text">프론트엔드의 서버리스를 보안하기 위해 firebase와 연동하여 서버를 구축합니다. </p>
+        </div> */}
         </div>
-        </SkillContainer>
     )
 }; export default Icon_item03;
-
-const SkillContainer = styled.div`
-display:flex;
-flex-direction: column;
-p.text{
-    padding:1rem;
-}
-.skill_icon{
-    display:flex;
-    flex-wrap: wrap;
-}
-`;
-
-const SkillStyled = styled.dl`
-border-radius: 15px;
-background-color: #131361;
-box-sizing: border-box;
-padding:2rem;
-margin-right:1rem;
-position: relative;
-margin-bottom:1rem;
-transition: 0.2s ease-in-out;
-animation-duration: 1s;
-animation-name: rotateY;
-animation-direction: alternate;
-box-shadow: 5px 11px 30px rgba(0,0,0,0.3);
-color:#fff;
-font-size:20px;
-:hover{
-    background-color: #2e2e8d;
-}
-dt{
-    width:5rem;
-}
-`;

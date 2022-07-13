@@ -8,16 +8,12 @@ import Design from './Skill_icon_item/Icon_item02';
 import Cording from './Skill_icon_item/Icon_item03';
 const Skills = ()=>{
     return(
-        <Container>
+        <div>
             <Routes>
                 <Route path="1" element={<Default/>}/>
                 <Route path="2" element={<Design/>}/>
                 <Route path="3" element={<Cording/>}/>
             </Routes>
-        </Container>
+        </div>
     )
 }; export default Skills;
-
-const Container = styled.div`
-    width:50%;
-`;

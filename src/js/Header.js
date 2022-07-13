@@ -1,9 +1,9 @@
 import {NavLink, Link} from 'react-router-dom';
 import React,{useState, useEffect,useRef} from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import styles from './css/text.module.css';
+import styles from './../css/text.module.css';
 import styled from 'styled-components';
-import { CreateAbout,CreateSkills, CreateTheory, CreateVideo, CreateCard } from './Reducers/Article';
+import { CreateAbout,CreateSkills, CreateTheory, CreateVideo, CreateCard } from '../Reducers/Article';
 const useScroll = ()=>{
     const [state, setState] = useState({
       x:0,
@@ -106,8 +106,9 @@ left:0;
 z-index: 1000;
 padding: 0.5rem;
 transition:.2s ease-in-out;
-    h1{
-        font-size:1.5rem;
+    h1{ 
+        padding:.5rem;
+        font-size:1rem;
         float:left;
         cursor: pointer;
     }
@@ -115,7 +116,6 @@ transition:.2s ease-in-out;
 const NavStyled = styled.nav`
     ul{
         display: flex;
-        padding-left:2rem;
     }
     li{
         padding:.3rem;
@@ -127,10 +127,11 @@ const NavStyled = styled.nav`
         padding:.5rem;
     }
     li:not(:last-child){
-        margin-right:1rem;
+        margin-right:.5rem;
     }
 `;
 const SubNavStyled = styled.div`
+transition:.2s ease-in-out;
 display:none;
     ul{ 
         padding-left:25rem;
