@@ -60,7 +60,7 @@ export default Article;
 const PcArticle = styled.article`
     margin: 0 2rem;
     width:200px;
-    height:90vh;
+    height:85vh;
     border-left :1px solid #ccc;
     border-right :1px solid #ccc;
 

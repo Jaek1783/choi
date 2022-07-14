@@ -4,10 +4,10 @@ import me from './../../img/about/me.jpg';
 import {useMediaQuery} from 'react-responsive';
 const AboutT = ()=>{
         const isPc = useMediaQuery ({
-        query : "(min-width : 800px)"
+        query : "(min-width : 1100px)"
         });
     return(
-            <StyledWrap id="about" className={isPc? "pcWrap": "MWrap"}>
+            <StyledWrap id="about" className={isPc? "pcIntro": "mIntro"}>
                 <h2 className={styles.subText}>나에 대하여</h2>
                     <div><img src={me} alt="나의 사진" /></div>
                     <dl>

@@ -52,25 +52,88 @@ button{
   border-radius: 10px;
   color:#ffffff;
 }
-
-/* 인트로 디자인 css  */
-.pcWrap{
-  margin:5rem auto;
+/* 인트로 디자인 */
+#about{
+margin:0 auto;
 display:flex;
-justify-content:space-evenly;
-box-sizing: border-box;
-text-align:center;
+text-align: center;
+padding-top:3rem;
 }
-.MWrap{
+.pcIntro{
+  width:60%;
+  justify-content:space-evenly;
+
+}
+.mIntro{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* 지원동기 디자인 css  */
+#why{
   display:flex;
+  box-sizing: border-box;
+  text-align:center;
+  border:5px solid #131361;
+  border-radius: 15px;
+  margin:3rem auto;
+  padding:1rem;
+}
+.pcWrap{
+  width:50%;
+  justify-content:space-evenly;
+}
+.pcWrap dt{
+  font-weight:bold;
+  font-size:1.5rem;
+  padding-bottom:1rem;
+}
+.pcWrap dd{
+  padding-bottom:.5rem;
+}
+.pcWrap span{
+  font-weight:bold;
+  font-size:1.5rem;
+}
+.TWrap{
+  width:50%;
+  justify-content:space-evenly;
+}
+.TWrap dt{
+  font-weight:bold;
+  font-size:1rem;
+  padding-bottom:1rem;
+}
+.TWrap dd{
+  padding-bottom:.5rem;
+  font-size: .8rem;
+}
+.TWrap span{
+  font-weight:bold;
+  font-size:1rem;
+}
+/* 지원동기 모바일 디자인 css */
+.MWrap{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:5rem auto 0;
   box-sizing: border-box;
   text-align:center;
+  font-size:.5rem;
 }
-
+.MWrap dt{
+  font-weight:bold;
+  font-size:1rem;
+  padding-bottom:1rem;
+}
+.MWrap dd{
+  padding-bottom:.5rem;
+  font-size: .8rem;
+}
+.MWrap span{
+  font-weight:bold;
+  font-size:1rem;
+}
 /* 내가 본 웹사이트 css */
 .websiteStyle{
   width:45%;

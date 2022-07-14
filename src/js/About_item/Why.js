@@ -1,8 +1,16 @@
 import styles from '../../css/text.module.css';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 const AboutT = ()=>{
+    const isPc = useMediaQuery({
+        query:"(min-width:1155px)"
+    })
+    const isTablet = useMediaQuery({
+        query:"(max-width:1154px) and (min-width:960px)"
+    });
+    const TabletOrMobile = isTablet ? "TWrap" : "MWrap";
     return(
-            <StyledWrap id="about" className="wrap">
+            <div id="why" className={isPc? "pcWrap" : TabletOrMobile}>
                 <h2 className={styles.subText}>지원동기</h2>
                 <dl>
                     <dt>Q. 개발직군에 지원한 동기는 무엇인가요?</dt>
@@ -17,33 +25,9 @@ const AboutT = ()=>{
                     <dd>개발자가 되<span>고싶습니다.</span></dd>
                     <dd>감사합니다.</dd>
                 </dl>
-            </StyledWrap>           
+            </div>           
     )
 };
 
 export default AboutT;
 
-const StyledWrap = styled.div`
-width:80%;
-border:5px solid #131361;
-margin:5rem auto;
-border-radius: 15px;
-box-sizing: border-box;
-text-align:center;
-
-    dl{
-        padding:2rem;
-    }
-    dt{
-        padding-bottom:2rem;
-        font-size:20px;
-        font-weight:bold;
-    }
-    dd{
-        padding:.5rem;
-        span{
-            font-weight:bold;
-            font-size:1.5rem;
-        }
-    }
-`;
