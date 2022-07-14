@@ -1,17 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
+import { useMediaQuery } from 'react-responsive';
 const Bootstrap = ()=>{
     const data = useSelector((state) => state.Pofol.Card);
+    const isPc = useMediaQuery ({
+        query : "(min-width : 1330px)"
+        });
+    const isTablet = useMediaQuery ({
+        query : "(min-width : 800px) and (max-width : 1329px)"
+        });
+    const tabletOrMobile = isTablet ? "Ttitle":"Mtitle";
     return(
-        <ContainerStyled>
-            <CardStyled>
-                <dt>{data[2].title}</dt>
+        <div className={isPc ? 'Container':'MContainer'}>
+            <dl className='card'>
+            <dt className={isPc ? "title":tabletOrMobile}>{data[2].title}</dt>
                 <dd>
                     {data[2].main}
                 </dd>
-            </CardStyled>
-            <TextStyled>
+            </dl>
+            <div className='desc'>
             <ul>
                 <li>부트스트랩으로 만든 간단한 페이지</li>
                 <li>
@@ -21,16 +29,11 @@ const Bootstrap = ()=>{
                 <li></li>
                 <li><BtnStyle onClick={()=>window.open(data[2].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
             </ul>
-            </TextStyled>          
-        </ContainerStyled>
+            </div>          
+        </div>
     )
 };export default Bootstrap;
-const ContainerStyled = styled.div`
-    width:70%;
-    padding-top:3rem;
-    display:flex;
-    justify-content:space-evenly;
-`;
+
 const CardStyled = styled.dl`
     width:20rem;
     height:25rem;

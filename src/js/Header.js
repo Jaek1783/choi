@@ -74,14 +74,7 @@ const Header = () =>{
                     <li className={styles.subText}>
                         <NavLink to = "/study" onClick={()=>{
                             dispatch(CreateVideo());
-                        }}>나의 공부들</NavLink></li>
-                    <li className={styles.subText}>
-                        <NavLink to = "/portfolio" onClick={()=>{
-                            dispatch(CreateCard());
-                        }} >나의 코딩들</NavLink>
-                    </li>
-                </ul>
-            </NavStyled>
+                        }}>나의 공부들</NavLink>
             <SubNavStyled ref={subRef}>
                 <ul>
                     <li><NavLink to = "/study/practice/1"  onClick={()=>{
@@ -93,6 +86,14 @@ const Header = () =>{
                         }}>이론들</NavLink></li>
                 </ul>
             </SubNavStyled>
+                    </li>
+                    <li className={styles.subText}>
+                        <NavLink to = "/portfolio" onClick={()=>{
+                            dispatch(CreateCard());
+                        }} >나의 코딩들</NavLink>
+                    </li>
+                </ul>
+            </NavStyled>
       </HeaderStyle>
     )
 };
@@ -133,8 +134,8 @@ const NavStyled = styled.nav`
 const SubNavStyled = styled.div`
 transition:.2s ease-in-out;
 display:none;
-    ul{ 
-        padding-left:25rem;
+    ul{ display:flex;
+        flex-direction:column;
         margin-top:.2rem;
     }
     li{

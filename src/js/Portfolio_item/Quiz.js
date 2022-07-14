@@ -1,17 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
+import { useMediaQuery } from 'react-responsive';
 const Salad = ()=>{
     const data = useSelector((state) => state.Pofol.Card);
+    const isPc = useMediaQuery ({
+        query : "(min-width : 1330px)"
+        });
+    const isTablet = useMediaQuery ({
+        query : "(min-width : 800px) and (max-width : 1329px)"
+        });
+    const tabletOrMobile = isTablet ? "Ttitle":"Mtitle";
     return(
-        <ContainerStyled>
-            <CardStyled>
-                <dt>{data[7].title}</dt>
+        <div className={isPc ? 'Container':'MContainer'}>
+            <dl className='card'>
+            <dt className={isPc ? "title":tabletOrMobile}>{data[7].title}</dt>
                 <dd>
                     {data[7].main}
                 </dd>
-            </CardStyled>
-            <TextStyled>
+            </dl>
+            <div className='desc'>
             <ul>
             <li>스파르타코딩클럽 리액트기초반을 수강하며, 만든 나를 아시나요? 프로젝트</li>
                 <li>
@@ -35,35 +43,10 @@ const Salad = ()=>{
                     </BtnStyle>
                 </li>
             </ul>
-            </TextStyled>          
-        </ContainerStyled>
+            </div>          
+        </div>
     )
 };export default Salad;
-const ContainerStyled = styled.div`
-    width:70%;
-    padding-top:3rem;
-    display:flex;
-    justify-content:space-evenly;
-`;
-const CardStyled = styled.dl`
-    width:20rem;
-    height:25rem;
-    
-    dt{ padding-top:3rem;
-        padding-bottom:3rem;
-        text-align:center;
-        border:1px solid #ccc;
-        border-radius:15px 15px 0 0;
-        font-size:20px;
-        font-weight:bold;
-        white-space:pre;
-    }
-    dd{
-        background-color:#131361;
-        padding:1rem;
-        border-radius:0 0 15px 15px;
-    }
-`;
 
 const TextStyled = styled.div`
 position:relative;

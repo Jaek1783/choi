@@ -1,125 +1,65 @@
-/* portfolio */
-#portfolio{
-    position:relative;
-    width:100%;
-    padding-top:3rem;
-    box-sizing: border-box;
-    display:table;
-    text-align: center;
-  }
-  .box{
-    width:98%;
-    display: flex;
-    box-sizing: border-box;
-    margin:0 auto;
-    padding-top:3rem;
-  }
-  .box>li:not(:last-child){
-    margin-right:1rem;
-  }
-  .card{
-    width:18rem;
-    height:19rem;
-    box-sizing: border-box;
-    box-shadow: 5px 11px 30px rgba(0,0,0,0.3);
-    background-color: #fff;
-    text-align: left;
-    font-size:.8rem;
-    cursor: pointer;
-    border-radius:10px;
-    transition:0.1s ease-in-out;
-    padding:1rem;
-    cursor: pointer;
-  }
-  .cardPc{
-    position:relative;
-    margin-top:2rem;
-  }
-  .cardTitle{
-    font-size: .8rem;
-    font-weight: bold;
-    padding-bottom:1rem;
-  }
-  p.img{
-    height:210px;
-    position:absolute;
-    left:0;
-    bottom:-30%;
-    border-radius:0 0 10px 10px;
-    padding:0 1rem;
-    background-color: #131361;
-    display: flex;
-    align-items: center;
-  }
-  
-  .card:hover{
-    transform:translateY(-10px);
-    box-shadow: 5px 11px 30px rgba(0,0,0,0.8);
-  }  
-  .card>dl{
-  font-size: .7rem;
-  } 
-  .spanText{
-    font-weight:bold;
-    font-size:1rem;
-  }
-  .detail{
-    margin-left:1rem;
-    font-family: 'Gowun Batang', serif;
-    font-size:0.8rem;
-  }
-  /* tablet_size css */
-  .Tbox{
-    display: flex;
-    height:60rem;
-  }
-  .cardT{
-    margin-top:2rem;
-    position:absolute;
-    top:4rem;
-  }
-  .cardT:hover{
-    transform:translateY(-10px);
-    box-shadow: 5px 11px 30px rgba(0,0,0,0.8);
-  }  
-  .spanText{
-    font-weight:bold;
-  }
-  .cardT:nth-child(1){
-    left:18%;
-  }
-  .cardT:nth-child(2){
-    left:40%;
-  }
-  .cardT:nth-child(3){
-    left:62%;
-  }
-  .cardT:nth-child(4){
-    top:31rem;
-    left:18%;
-  }
-  .cardT:nth-child(5){
-    top:31rem;
-    left:40%;
-  }
-  .cardT:nth-child(6){
-    top:31rem;
-    left:62%;
-  }
-  /* Mobile css */
-  .Mbox{
-    width:18rem;
-    height:170rem;
-    margin:4rem auto;
-  }
-  .cardM{
-    position: relative;
-    left:0;
-  }
-  .cardM:not(:first-child){
-    margin-top:8rem;
-  }
-.cardM:hover{
-  transform:translateY(-10px);
-  box-shadow: 5px 11px 30px rgba(0,0,0,0.8);
+.Container{
+  width:90%;
+  margin:0 auto;
+  padding-top:3rem;
+  display:flex;
+  justify-content: space-evenly;
+}
+.card{
+  width:40%;
+  margin:0 auto;
+  background-color: #131361;
+  color:#fff;
+  border-radius: 15px;
+}
+.title{
+  padding-top:3rem;
+  padding-bottom:5rem;
+  text-align:center;
+  font-size:30px;
+  font-weight:bold;
+  white-space:pre;
+}
+.card>dd{
+  padding:1rem;
+  margin-top:1rem;
+}
+.desc{
+  width:40%;
+  margin:0 auto;
+  position:relative;
+  border:5px solid #ccc;
+  border-radius:15px;
+}
+.desc li{
+  padding:1rem;
+}
+.desc li:last-child{
+  text-align:right;
+}
+
+/* 모바일 사이즈 css */
+
+.MContainer>.card{
+  width:80%;
+  margin-bottom:1rem;
+}
+.Ttitle{
+  padding-top:3rem;
+  padding-bottom:8rem;
+  text-align:center;
+  font-weight:bold;
+  white-space:pre;
+  font-size:40px;
+}
+.Mtitle{
+  padding-top:3rem;
+  padding-bottom:8rem;
+  text-align:center;
+  font-weight:bold;
+  white-space:pre;
+  font-size:30px;
+}
+.MContainer>.desc{
+  width:80%;
 }

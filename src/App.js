@@ -13,12 +13,17 @@ import Youtube from './js/Study_icon_item/Youtube';
 import styled from 'styled-components';
 import Practice from './js/Practice';
 import Theory from './js/Theory';
+import "./css/portfolio.css";
+import { useMediaQuery } from 'react-responsive';
 
 const App = ()=> {
+  const isPc = useMediaQuery ({
+    query : "(min-width : 800px)"
+    });
   return (
     <div className="App">
       <Header/>
-      <div className="contents">
+      <div className={isPc ? "PcContainer" : "MContainer"}>
       <Article/>
       <Contents>
           <Routes>

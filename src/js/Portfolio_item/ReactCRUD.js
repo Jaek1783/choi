@@ -1,17 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from "styled-components";
+import { useMediaQuery } from 'react-responsive';
 const ReactCRUD = ()=>{
     const data = useSelector((state) => state.Pofol.Card);
+    const isPc = useMediaQuery ({
+        query : "(min-width : 1330px)"
+        });
+    const isTablet = useMediaQuery ({
+        query : "(min-width : 800px) and (max-width : 1329px)"
+        });
+    const tabletOrMobile = isTablet ? "Ttitle":"Mtitle";
     return(
-        <ContainerStyled>
-            <CardStyled>
-                <dt>{data[3].title}</dt>
+        <div className={isPc ? 'Container':'MContainer'}>
+            <dl className='card'>
+            <dt className={isPc ? "title":tabletOrMobile}>{data[3].title}</dt>
                 <dd>
                     {data[3].main}
                 </dd>
-            </CardStyled>
-            <TextStyled>
+            </dl>
+            <div className='desc'>
             <ul>
                 <li>C , R , U, D [클론코딩]</li>
                 <li>Create, Read, Update, Delete</li>
@@ -23,35 +31,10 @@ const ReactCRUD = ()=>{
                 <li>클론코딩을 통해 CRUD에 대한 내용을 학습하였다.</li>
                 <li><BtnStyle onClick={()=>window.open(data[3].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
             </ul>
-            </TextStyled>          
-        </ContainerStyled>
+            </div>          
+        </div>
     )
 };export default ReactCRUD;
-const ContainerStyled = styled.div`
-    width:70%;
-    padding-top:3rem;
-    display:flex;
-    justify-content:space-evenly;
-`;
-const CardStyled = styled.dl`
-    width:20rem;
-    height:25rem;
-    
-    dt{ padding-top:3rem;
-        padding-bottom:8rem;
-        text-align:center;
-        border:1px solid #ccc;
-        border-radius:15px 15px 0 0;
-        font-size:20px;
-        font-weight:bold;
-        white-space:pre;
-    }
-    dd{
-        background-color:#131361;
-        padding:1rem;
-        border-radius:0 0 15px 15px;
-    }
-`;
 
 const TextStyled = styled.div`
 position:relative;

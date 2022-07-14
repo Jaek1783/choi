@@ -1,9 +1,13 @@
 import styles from '../../css/text.module.css';
 import styled from 'styled-components';
 import me from './../../img/about/me.jpg';
+import {useMediaQuery} from 'react-responsive';
 const AboutT = ()=>{
+        const isPc = useMediaQuery ({
+        query : "(min-width : 800px)"
+        });
     return(
-            <StyledWrap id="about" className="wrap">
+            <StyledWrap id="about" className={isPc? "pcWrap": "MWrap"}>
                 <h2 className={styles.subText}>나에 대하여</h2>
                     <div><img src={me} alt="나의 사진" /></div>
                     <dl>
@@ -27,11 +31,6 @@ const AboutT = ()=>{
 export default AboutT;
 
 const StyledWrap = styled.div`
-margin:5rem auto;
-display:flex;
-justify-content:space-evenly;
-box-sizing: border-box;
-text-align:center;
     div{
         width:200px;
     }

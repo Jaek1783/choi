@@ -10,8 +10,11 @@ ul,li,a{
 img{
   width:100%;
 }
-.contents{
+.PcContainer{
   display:flex;
+  margin-top:5rem;
+}
+.MContainer{
   margin-top:5rem;
 }
 h2{
@@ -38,7 +41,6 @@ button{
 
 
 .active{
-  /* background-color:#7878ff; */
   background-color: #131361;
   padding:.3rem;
   border-radius: 10px;
@@ -49,4 +51,35 @@ button{
   padding:.3rem;
   border-radius: 10px;
   color:#ffffff;
+}
+
+/* 인트로 디자인 css  */
+.pcWrap{
+  margin:5rem auto;
+display:flex;
+justify-content:space-evenly;
+box-sizing: border-box;
+text-align:center;
+}
+.MWrap{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:5rem auto 0;
+  box-sizing: border-box;
+  text-align:center;
+}
+
+/* 내가 본 웹사이트 css */
+.websiteStyle{
+  width:45%;
+padding:.5rem;
+margin:0 auto;
+text-align:center;
+}
+.MwebsiteStyle{
+padding:.5rem;
+margin:0 auto;
+text-align:center;
 }

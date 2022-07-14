@@ -1,6 +1,7 @@
 import Intro from "./Intro";
 import Why from "./Why";
 import {Routes, Route} from "react-router-dom";
+
 const AboutT = ()=>{
     return(
             <Routes>
