@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import lifecycle from './../../img/study/theory/lifecycle.png';
 const What_is_Javascript = () => {
     return (
         <StyledUl>
@@ -24,7 +23,6 @@ const What_is_Javascript = () => {
                 <p>componentDidUpdate(prevProps, prevState, snapshot)</p>
                 리렌더링을 완료한 후 실행되는 함수다.
             </StyledLi>
-            {/* <StyledLi></StyledLi> */}
         </StyledUl>
     );
 };

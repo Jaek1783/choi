@@ -23,6 +23,6 @@ const Theory = ()=>{
 }; export default Theory;
 
 const StyledDiv = styled.div`
-    width:70%;
+    width:90%;
     margin:0 auto;
 `;

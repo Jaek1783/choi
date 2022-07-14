@@ -74,19 +74,19 @@ const PcArticle = styled.article`
 `;
 const MArticle = styled.article`
 padding-top:1rem;
-width:70vh;
 margin:0 auto;
 overflow-x:scroll;
     ul{ 
-        width:90%;
         margin: 0 auto;
         display:flex;
         text-align:center;
     }    
-    li{
+    li{ 
+        margin:0 auto;
+    }
+    li>a{
+        display:inline-block;
         padding:0 1.5rem 1rem;
-        border-right:1px solid #ccc;
-        margin:0auto;
-        font-size:.8rem;
+        font-size:1.5rem;
     }
 `;

@@ -47,5 +47,5 @@ export default App;
 
 const Contents = styled.div`
 width:80%;
-margin:0 auto;
+margin:3rem auto 0;
 `;
