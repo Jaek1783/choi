@@ -30,13 +30,10 @@ const Theory = [
 ];
 const Card = [
     {id:1, title: '0ssaem.com', link:"/portfolio/"},
-    {id:2, title: 'Tetris-Game', link:"/portfolio/"},
-    {id:3, title: 'Introduce My Self', link:"/portfolio/"},             
-    {id:4, title: 'React CRUD post site', link:"/portfolio/"},             
-    {id:5,  title: 'Redux in React', link:"/portfolio/"},             
-    {id:6,  title: 'Salad Web site', link:"/portfolio/"},             
-    {id:7,  title: 'bucket_list', link:"/portfolio/"},             
-    {id:8,  title: 'YouKnowMe? site', link:"/portfolio/"},             
+    {id:2, title: 'Tetris-Game', link:"/portfolio/"},                               
+    {id:3,  title: 'Salad Web site', link:"/portfolio/"},             
+    {id:4,  title: 'bucket_list', link:"/portfolio/"},             
+    {id:5,  title: 'YouKnowMe? site', link:"/portfolio/"},             
 ];
 // Action
 const ABOUT = "article/ABOUT";

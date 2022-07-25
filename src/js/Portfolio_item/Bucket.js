@@ -13,9 +13,9 @@ const Salad = ()=>{
     const tabletOrMobile = isTablet ? "Ttitle":"Mtitle";
     return(
         <div className={isPc ? 'Container':'MContainer'}>            <dl className='card'>
-                <dt className={isPc ? "title":tabletOrMobile}>{data[6].title}</dt>
+                <dt className={isPc ? "title":tabletOrMobile}>{data[3].title}</dt>
                 <dd>
-                    {data[6].main}
+                    {data[3].main}
                 </dd>
             </dl>
             <div className='desc'>

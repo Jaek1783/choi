@@ -27,6 +27,7 @@ const App = ()=> {
       <Article/>
       <Contents>
           <Routes>
+            <Route path="*" element={<Intro/>}/>
             <Route path="/choi" element={<Intro/>}/>
             <Route path="/choi/*" element={<About/>}/>
             <Route path="/skills" element={<Default/>}/>

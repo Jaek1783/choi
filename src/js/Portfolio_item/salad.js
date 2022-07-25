@@ -14,9 +14,9 @@ const Salad = ()=>{
     return(
         <div className={isPc ? 'Container':'MContainer'}>
             <dl className='card'>
-            <dt className={isPc ? "title":tabletOrMobile}>{data[4].title}</dt>
+            <dt className={isPc ? "title":tabletOrMobile}>{data[2].title}</dt>
                 <dd>
-                    {data[4].main}
+                    {data[2].main}
                 </dd>
             </dl>
             <div className='desc'>
@@ -25,8 +25,7 @@ const Salad = ()=>{
                     <p>제작기간</p>
                     <p>2022.06.22 ~ 2022.06.23</p>
                 </li>
-                <li>샐러드판매 사이트의 회사소개사이트를 벤치마킹하여 디자인한 웹사이트</li>
-                <li>업데이트 진행중</li>
+                <li>기획부터 디자인, 코딩과 배포까지 모든게 담겨있는 올인원 사이트</li>
                 <li><BtnStyle onClick={()=>window.open(data[4].adress,'_blank')}>사이트 구경가기</BtnStyle></li>
             </ul>
             </div>          
